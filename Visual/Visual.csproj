@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEFF14D0-6EF4-456B-AAFB-0B04C3C09DD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Visual</RootNamespace>
+    <AssemblyName>Visual</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.6.1\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accesoDatos\Datos.cs" />
+    <Compile Include="modelo\clsAdicional.cs" />
+    <Compile Include="modelo\clsCliente.cs" />
+    <Compile Include="modelo\clsEjercicio.cs" />
+    <Compile Include="modelo\clsEntrenador.cs" />
+    <Compile Include="modelo\clsMaquina.cs" />
+    <Compile Include="modelo\clsNutricionista.cs" />
+    <Compile Include="modelo\clsPersona.cs" />
+    <Compile Include="modelo\clsPlanAlimentacion.cs" />
+    <Compile Include="modelo\clsProducto.cs" />
+    <Compile Include="modelo\clsProveedor.cs" />
+    <Compile Include="modelo\clsRutina.cs" />
+    <Compile Include="modelo\clsSuscripcion.cs" />
+    <Compile Include="modelo\clsUsuario.cs" />
+    <Compile Include="modelo\Compra.cs" />
+    <Compile Include="modelo\Compra1.cs" />
+    <Compile Include="vtnIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnIniciarSesion.Designer.cs">
+      <DependentUpon>vtnIniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vtnInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnInicio.Designer.cs">
+      <DependentUpon>vtnInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAlimentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAlimentacion.Designer.cs">
+      <DependentUpon>vtnAlimentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnTrenSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnTrenSu.Designer.cs">
+      <DependentUpon>vtnTrenSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnTrenIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnTrenIn.Designer.cs">
+      <DependentUpon>vtnTrenIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnOtrosE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnOtrosE.Designer.cs">
+      <DependentUpon>vtnOtrosE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnProteinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnProteinas.Designer.cs">
+      <DependentUpon>vtnProteinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnMaquinas.Designer.cs">
+      <DependentUpon>vtnMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnOtrosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnOtrosP.Designer.cs">
+      <DependentUpon>vtnOtrosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnBuscar.Designer.cs">
+      <DependentUpon>vtnBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAdicional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAdicional.Designer.cs">
+      <DependentUpon>vtnAdicional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnCompra.Designer.cs">
+      <DependentUpon>vtnCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnEntrenador.Designer.cs">
+      <DependentUpon>vtnEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnNutricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnNutricion.Designer.cs">
+      <DependentUpon>vtnNutricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAcercaDe.Designer.cs">
+      <DependentUpon>vtnAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnRutina.Designer.cs">
+      <DependentUpon>vtnRutina.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="vtnIniciarSesion.resx">
+      <DependentUpon>vtnIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnInicio.resx">
+      <DependentUpon>vtnInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAlimentacion.resx">
+      <DependentUpon>vtnAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnTrenSu.resx">
+      <DependentUpon>vtnTrenSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnTrenIn.resx">
+      <DependentUpon>vtnTrenIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnOtrosE.resx">
+      <DependentUpon>vtnOtrosE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnProteinas.resx">
+      <DependentUpon>vtnProteinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnMaquinas.resx">
+      <DependentUpon>vtnMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnOtrosP.resx">
+      <DependentUpon>vtnOtrosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnBuscar.resx">
+      <DependentUpon>vtnBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAdicional.resx">
+      <DependentUpon>vtnAdicional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnCompra.resx">
+      <DependentUpon>vtnCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnEntrenador.resx">
+      <DependentUpon>vtnEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnNutricion.resx">
+      <DependentUpon>vtnNutricion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAcercaDe.resx">
+      <DependentUpon>vtnAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnRutina.resx">
+      <DependentUpon>vtnRutina.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadro.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rutinas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alimentacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrenS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ejercicios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrenI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Otros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proteina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maquinas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtrosP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adicionales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entrenador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nutricion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acercade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nutri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acerca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-06-06 223019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trenss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trenii.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maqui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62aadffb8508e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62aadffb8508e1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regis2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
