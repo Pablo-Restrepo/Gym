@@ -16,13 +16,11 @@ namespace Visual
     public partial class Form1 : Form
     {
         private object aux = 1;
-        //Datos conexion = new Datos();
 
         public Form1()
         {
             InitializeComponent();
             abrirFormHija(new vtnInicio());
-            //conexion.abrir();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

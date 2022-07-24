@@ -14,8 +14,7 @@ namespace Visual
 {
     public partial class vtnRutina : Form
     {
-        String connectionString =
-            "Data Source=localhost:1521/xe;User Id=system;Password=oracle";
+        String connectionString ="Data Source=localhost:1521/xe;User Id=system;Password=oracle";
         public vtnRutina()
         {
             InitializeComponent();
@@ -37,7 +36,6 @@ namespace Visual
                 OracleCommand sqlSelect = new OracleCommand(sql);
                 sqlSelect.Connection = miConexion;
                 var dr = sqlSelect.ExecuteReader();
-
                 System.Data.DataTable dt = new System.Data.DataTable();
                 dt.Load(dr);
                 dataGridView1.DataSource = dt;

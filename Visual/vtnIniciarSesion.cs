@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Visual
 {
     public partial class vtnIniciarSesion : Form
     {
+        String connectionString = "Data Source=localhost:1521/xe;User Id=pablo;Password=oracle";
         public vtnIniciarSesion()
         {
             InitializeComponent();
@@ -39,12 +41,7 @@ namespace Visual
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void panelCentral_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
             Form formulario = new Form1();
             this.Hide();
@@ -52,64 +49,154 @@ namespace Visual
             this.Close();
         }
 
-        private void pictureBox4_Click_1(object sender, EventArgs e)
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox6.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
-            textBox8.Visible = true;
-            textBox9.Visible = true;
-            textBox10.Visible = true;
-            textBox11.Visible = true;
-            textBox12.Visible = true;
-            textBox13.Visible = true;
-            pictureBox7.Visible = true;
-            pictureBox5.Visible = true;
+            pbLogo.Visible = false;
+            pbLogoIniciarSes.Visible = false;
+            btnRegistrarse.Visible = true;
+            txtUsuario.Visible = true;
+            cbxSexo.Visible = true;
+            dtpFechaNacimiento.Visible = true;
+            txtCiudad.Visible = true;
+            txtContrasenia.Visible = true;
+            txtRecContrasenia.Visible = true;
+            txtCorreo.Visible = true;
+            txtTarjCredito.Visible = true;
+            txtNombre.Visible = true;
+            txtApellido.Visible = true;
+            txtCedula.Visible = true;
+            txtPeso.Visible = true;
+            txtAltura.Visible = true;
+            btnVolver.Visible = true;
+            pbRegistr.Visible = true;
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
-            pictureBox6.Visible = false;
-            textBox3.Visible = false;
-            textBox4.Visible = false;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
-            textBox7.Visible = false;
-            textBox8.Visible = false;
-            textBox9.Visible = false;
-            textBox10.Visible = false;
-            textBox11.Visible = false;
-            textBox12.Visible = false;
-            textBox13.Visible = false;
-            pictureBox5.Visible = false;
-            pictureBox7.Visible = false;
+            OracleConnection miConexion = new OracleConnection();
+            string sql = "";
+            int inserto = 0;
+            if (txtContrasenia.Equals(txtRecContrasenia)) { 
+                
+            }
+            else
+            {
+                MessageBox.Show("Error!. La contraseña es erronea. Retificar.");
+            }
+
+            if (!comprobarUsuario())
+            {
+                MessageBox.Show("ta bien el user");
+            }
+            else
+            {
+                MessageBox.Show("Error!. El usuario ya existe. Use otro.");
+            }
+
+            try
+            {
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+
+                sql = "INSERT INTO PERSONA (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text +"','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + ")";
+                OracleCommand sqlInsert = new OracleCommand(sql);
+                sqlInsert.Connection = miConexion;
+                inserto = sqlInsert.ExecuteNonQuery();
+
+                sql = "INSERT INTO CLIENTE (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA,CLI_TARJETACREDITO,CLI_CIUDAD) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + "," + txtTarjCredito.Text + ",'" + txtCiudad.Text + "')";
+                OracleCommand sqlInsert2 = new OracleCommand(sql);
+                sqlInsert2.Connection = miConexion;
+                inserto = sqlInsert2.ExecuteNonQuery();
+
+                sql = "INSERT INTO USUARIO (USU_LOGIN,PER_CEDULA,USU_PASSWORD,USU_CORREO) VALUES ('" + txtUsuario.Text + "'," + txtCedula.Text +  ",'" + txtContrasenia.Text + "','" + txtCorreo.Text + "')";
+                OracleCommand sqlInsert3 = new OracleCommand(sql);
+                sqlInsert3.Connection = miConexion;
+                inserto = sqlInsert3.ExecuteNonQuery();
+
+                sql = "UPDATE CLIENTE SET USU_LOGIN = '" + txtUsuario.Text + "' WHERE PER_CEDULA = " + txtCedula.Text;
+                OracleCommand sqlInsert4 = new OracleCommand(sql);
+                sqlInsert4.Connection = miConexion;
+                inserto = sqlInsert4.ExecuteNonQuery();
+
+                if (inserto > 0)
+                {
+                    MessageBox.Show("Se registro correctamente!");
+                }
+                miConexion.Close();
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
+
+            pbLogo.Visible = true;
+            pbLogoIniciarSes.Visible = true;
+            btnRegistrarse.Visible = false;
+            cbxSexo.Visible = false;
+            dtpFechaNacimiento.Visible = false;
+            txtUsuario.Visible = false;
+            txtCiudad.Visible = false;
+            txtContrasenia.Visible = false;
+            txtRecContrasenia.Visible = false;
+            txtCorreo.Visible = false;
+            txtTarjCredito.Visible = false;
+            txtNombre.Visible = false;
+            txtApellido.Visible = false;
+            txtCedula.Visible = false;
+            txtPeso.Visible = false;
+            txtAltura.Visible = false;
+            pbRegistr.Visible = false;
+            btnVolver.Visible = false;
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
-            pictureBox6.Visible = false;
-            textBox3.Visible = false;
-            textBox4.Visible = false;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
-            textBox7.Visible = false;
-            textBox8.Visible = false;
-            textBox9.Visible = false;
-            textBox10.Visible = false;
-            textBox11.Visible = false;
-            textBox12.Visible = false;
-            textBox13.Visible = false;
-            pictureBox5.Visible = false;
-            pictureBox7.Visible = false;
+            pbLogo.Visible = true;
+            pbLogoIniciarSes.Visible = true;
+            btnRegistrarse.Visible = false;
+            cbxSexo.Visible = false;
+            dtpFechaNacimiento.Visible = false;
+            txtUsuario.Visible = false;
+            txtCiudad.Visible = false;
+            txtContrasenia.Visible = false;
+            txtRecContrasenia.Visible = false;
+            txtCorreo.Visible = false;
+            txtTarjCredito.Visible = false;
+            txtNombre.Visible = false;
+            txtApellido.Visible = false;
+            txtCedula.Visible = false;
+            txtPeso.Visible = false;
+            txtAltura.Visible = false;
+            pbRegistr.Visible = false;
+            btnVolver.Visible = false;
+        }
+        private Boolean comprobarUsuario()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            miConexion.ConnectionString = connectionString;
+            miConexion.Open();
+            string sql = "";
+            int inserto = 0;
+            sql = "SELECT USU_LOGIN FROM USUARIO WHERE USU_LOGIN = '" + txtUsuario.Text + "'";
+            OracleCommand sqlInsert = new OracleCommand(sql);
+            sqlInsert.Connection = miConexion;
+            inserto = sqlInsert.ExecuteNonQuery();
+
+            if (inserto > 0)
+            {
+                MessageBox.Show("Se registro correctamente!");
+            }
+            
+            if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuario.Text))
+            {
+                return true;
+            }
+
+            miConexion.Close();
+
+            return false;
         }
     }
 }

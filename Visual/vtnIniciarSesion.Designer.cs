@@ -33,36 +33,37 @@ namespace Visual
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.cbxSexo = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.PictureBox();
+            this.btnRegistrarse = new System.Windows.Forms.PictureBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtTarjCredito = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtRecContrasenia = new System.Windows.Forms.TextBox();
+            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pbRegistr = new System.Windows.Forms.PictureBox();
+            this.txtContraseniaIniSes = new System.Windows.Forms.TextBox();
+            this.txtUsuarioIniSes = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.PictureBox();
+            this.btnIniciar = new System.Windows.Forms.PictureBox();
+            this.pbLogoIniciarSes = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelBarraTop.SuspendLayout();
             this.panelCentral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRegistr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIniciar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoIniciarSes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarraTop
@@ -113,314 +114,334 @@ namespace Visual
             // 
             this.panelCentral.BackColor = System.Drawing.Color.Transparent;
             this.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelCentral.Controls.Add(this.pictureBox7);
-            this.panelCentral.Controls.Add(this.pictureBox6);
-            this.panelCentral.Controls.Add(this.textBox14);
-            this.panelCentral.Controls.Add(this.textBox13);
-            this.panelCentral.Controls.Add(this.textBox12);
-            this.panelCentral.Controls.Add(this.textBox11);
-            this.panelCentral.Controls.Add(this.textBox10);
-            this.panelCentral.Controls.Add(this.textBox9);
-            this.panelCentral.Controls.Add(this.textBox8);
-            this.panelCentral.Controls.Add(this.textBox7);
-            this.panelCentral.Controls.Add(this.textBox6);
-            this.panelCentral.Controls.Add(this.textBox5);
-            this.panelCentral.Controls.Add(this.textBox4);
-            this.panelCentral.Controls.Add(this.textBox3);
-            this.panelCentral.Controls.Add(this.pictureBox5);
-            this.panelCentral.Controls.Add(this.textBox2);
-            this.panelCentral.Controls.Add(this.textBox1);
-            this.panelCentral.Controls.Add(this.pictureBox4);
-            this.panelCentral.Controls.Add(this.pictureBox3);
-            this.panelCentral.Controls.Add(this.pictureBox2);
-            this.panelCentral.Controls.Add(this.pictureBox1);
+            this.panelCentral.Controls.Add(this.txtCiudad);
+            this.panelCentral.Controls.Add(this.dtpFechaNacimiento);
+            this.panelCentral.Controls.Add(this.cbxSexo);
+            this.panelCentral.Controls.Add(this.btnVolver);
+            this.panelCentral.Controls.Add(this.btnRegistrarse);
+            this.panelCentral.Controls.Add(this.txtAltura);
+            this.panelCentral.Controls.Add(this.txtPeso);
+            this.panelCentral.Controls.Add(this.txtCedula);
+            this.panelCentral.Controls.Add(this.txtApellido);
+            this.panelCentral.Controls.Add(this.txtNombre);
+            this.panelCentral.Controls.Add(this.txtTarjCredito);
+            this.panelCentral.Controls.Add(this.txtCorreo);
+            this.panelCentral.Controls.Add(this.txtRecContrasenia);
+            this.panelCentral.Controls.Add(this.txtContrasenia);
+            this.panelCentral.Controls.Add(this.txtUsuario);
+            this.panelCentral.Controls.Add(this.pbRegistr);
+            this.panelCentral.Controls.Add(this.txtContraseniaIniSes);
+            this.panelCentral.Controls.Add(this.txtUsuarioIniSes);
+            this.panelCentral.Controls.Add(this.btnRegistrar);
+            this.panelCentral.Controls.Add(this.btnIniciar);
+            this.panelCentral.Controls.Add(this.pbLogoIniciarSes);
+            this.panelCentral.Controls.Add(this.pbLogo);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 0);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(906, 720);
             this.panelCentral.TabIndex = 3;
-            this.panelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
-            // pictureBox7
+            // txtCiudad
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::Visual.Properties.Resources.pngegg;
-            this.pictureBox7.Location = new System.Drawing.Point(40, 40);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.txtCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCiudad.Location = new System.Drawing.Point(217, 471);
+            this.txtCiudad.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtCiudad.MaxLength = 30;
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(187, 22);
+            this.txtCiudad.TabIndex = 23;
+            this.txtCiudad.Visible = false;
             // 
-            // pictureBox6
+            // dtpFechaNacimiento
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Visual.Properties.Resources.registrars;
-            this.pictureBox6.Location = new System.Drawing.Point(389, 576);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(152, 53);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.dtpFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.dtpFechaNacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.dtpFechaNacimiento.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.dtpFechaNacimiento.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(663, 343);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(119, 24);
+            this.dtpFechaNacimiento.TabIndex = 22;
+            this.dtpFechaNacimiento.Visible = false;
             // 
-            // textBox14
+            // cbxSexo
             // 
-            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox14.Location = new System.Drawing.Point(658, 322);
-            this.textBox14.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox14.MaxLength = 30;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(130, 22);
-            this.textBox14.TabIndex = 19;
-            this.textBox14.Visible = false;
+            this.cbxSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.cbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSexo.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSexo.ForeColor = System.Drawing.Color.White;
+            this.cbxSexo.FormattingEnabled = true;
+            this.cbxSexo.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.cbxSexo.Location = new System.Drawing.Point(556, 406);
+            this.cbxSexo.Name = "cbxSexo";
+            this.cbxSexo.Size = new System.Drawing.Size(227, 26);
+            this.cbxSexo.TabIndex = 21;
+            this.cbxSexo.Visible = false;
             // 
-            // textBox13
+            // btnVolver
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox13.Location = new System.Drawing.Point(559, 512);
-            this.textBox13.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox13.MaxLength = 30;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(229, 22);
-            this.textBox13.TabIndex = 18;
-            this.textBox13.Visible = false;
+            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Image = global::Visual.Properties.Resources.pngegg;
+            this.btnVolver.Location = new System.Drawing.Point(40, 40);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(50, 50);
+            this.btnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnVolver.TabIndex = 20;
+            this.btnVolver.TabStop = false;
+            this.btnVolver.Visible = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // textBox12
+            // btnRegistrarse
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Location = new System.Drawing.Point(550, 447);
-            this.textBox12.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox12.MaxLength = 30;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(238, 22);
-            this.textBox12.TabIndex = 17;
-            this.textBox12.Visible = false;
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarse.Image = global::Visual.Properties.Resources.registrars;
+            this.btnRegistrarse.Location = new System.Drawing.Point(389, 589);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(152, 53);
+            this.btnRegistrarse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRegistrarse.TabIndex = 7;
+            this.btnRegistrarse.TabStop = false;
+            this.btnRegistrarse.Visible = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // textBox11
+            // txtAltura
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox11.Location = new System.Drawing.Point(550, 385);
-            this.textBox11.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox11.MaxLength = 30;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(238, 22);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.Visible = false;
+            this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtAltura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAltura.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtAltura.Location = new System.Drawing.Point(381, 534);
+            this.txtAltura.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtAltura.MaxLength = 30;
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(229, 22);
+            this.txtAltura.TabIndex = 18;
+            this.txtAltura.Visible = false;
             // 
-            // textBox10
+            // txtPeso
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox10.Location = new System.Drawing.Point(564, 256);
-            this.textBox10.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox10.MaxLength = 30;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(224, 22);
-            this.textBox10.TabIndex = 15;
-            this.textBox10.Visible = false;
+            this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeso.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPeso.Location = new System.Drawing.Point(550, 471);
+            this.txtPeso.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtPeso.MaxLength = 30;
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(238, 22);
+            this.txtPeso.TabIndex = 17;
+            this.txtPeso.Visible = false;
             // 
-            // textBox9
+            // txtCedula
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Location = new System.Drawing.Point(572, 186);
-            this.textBox9.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(216, 22);
-            this.textBox9.TabIndex = 14;
-            this.textBox9.Visible = false;
+            this.txtCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCedula.Location = new System.Drawing.Point(564, 283);
+            this.txtCedula.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtCedula.MaxLength = 30;
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(224, 22);
+            this.txtCedula.TabIndex = 15;
+            this.txtCedula.Visible = false;
             // 
-            // textBox8
+            // txtApellido
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Location = new System.Drawing.Point(217, 512);
-            this.textBox8.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox8.MaxLength = 30;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(205, 22);
-            this.textBox8.TabIndex = 13;
-            this.textBox8.Visible = false;
+            this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtApellido.Location = new System.Drawing.Point(572, 219);
+            this.txtApellido.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtApellido.MaxLength = 30;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(216, 22);
+            this.txtApellido.TabIndex = 14;
+            this.txtApellido.Visible = false;
             // 
-            // textBox7
+            // txtNombre
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox7.Location = new System.Drawing.Point(244, 447);
-            this.textBox7.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox7.MaxLength = 30;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 22);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Visible = false;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtNombre.Location = new System.Drawing.Point(578, 155);
+            this.txtNombre.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtNombre.MaxLength = 30;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(205, 22);
+            this.txtNombre.TabIndex = 13;
+            this.txtNombre.Visible = false;
             // 
-            // textBox6
+            // txtTarjCredito
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Location = new System.Drawing.Point(207, 384);
-            this.textBox6.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox6.MaxLength = 30;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(224, 22);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.Visible = false;
+            this.txtTarjCredito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtTarjCredito.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTarjCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarjCredito.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTarjCredito.Location = new System.Drawing.Point(244, 406);
+            this.txtTarjCredito.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtTarjCredito.MaxLength = 30;
+            this.txtTarjCredito.Name = "txtTarjCredito";
+            this.txtTarjCredito.Size = new System.Drawing.Size(187, 22);
+            this.txtTarjCredito.TabIndex = 12;
+            this.txtTarjCredito.Visible = false;
             // 
-            // textBox5
+            // txtCorreo
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(278, 321);
-            this.textBox5.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox5.MaxLength = 30;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(153, 22);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Visible = false;
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtCorreo.Location = new System.Drawing.Point(207, 344);
+            this.txtCorreo.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtCorreo.MaxLength = 30;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(224, 22);
+            this.txtCorreo.TabIndex = 11;
+            this.txtCorreo.Visible = false;
             // 
-            // textBox4
+            // txtRecContrasenia
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(246, 256);
-            this.textBox4.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox4.MaxLength = 30;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 22);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Visible = false;
+            this.txtRecContrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtRecContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRecContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecContrasenia.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtRecContrasenia.Location = new System.Drawing.Point(281, 281);
+            this.txtRecContrasenia.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtRecContrasenia.MaxLength = 30;
+            this.txtRecContrasenia.Name = "txtRecContrasenia";
+            this.txtRecContrasenia.PasswordChar = '*';
+            this.txtRecContrasenia.Size = new System.Drawing.Size(153, 22);
+            this.txtRecContrasenia.TabIndex = 10;
+            this.txtRecContrasenia.Visible = false;
             // 
-            // textBox3
+            // txtContrasenia
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(213, 185);
-            this.textBox3.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox3.MaxLength = 30;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 22);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Visible = false;
+            this.txtContrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasenia.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtContrasenia.Location = new System.Drawing.Point(246, 218);
+            this.txtContrasenia.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtContrasenia.MaxLength = 30;
+            this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.PasswordChar = '*';
+            this.txtContrasenia.Size = new System.Drawing.Size(185, 22);
+            this.txtContrasenia.TabIndex = 9;
+            this.txtContrasenia.Visible = false;
             // 
-            // pictureBox5
+            // txtUsuario
             // 
-            this.pictureBox5.Image = global::Visual.Properties.Resources.registras;
-            this.pictureBox5.Location = new System.Drawing.Point(79, 60);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(762, 609);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtUsuario.Location = new System.Drawing.Point(213, 155);
+            this.txtUsuario.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtUsuario.MaxLength = 30;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(205, 22);
+            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.Visible = false;
             // 
-            // textBox2
+            // pbRegistr
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(572, 368);
-            this.textBox2.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 22);
-            this.textBox2.TabIndex = 5;
+            this.pbRegistr.Image = global::Visual.Properties.Resources.regitrarsefinal;
+            this.pbRegistr.Location = new System.Drawing.Point(79, 60);
+            this.pbRegistr.Name = "pbRegistr";
+            this.pbRegistr.Size = new System.Drawing.Size(762, 609);
+            this.pbRegistr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRegistr.TabIndex = 6;
+            this.pbRegistr.TabStop = false;
+            this.pbRegistr.Visible = false;
             // 
-            // textBox1
+            // txtContraseniaIniSes
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(572, 298);
-            this.textBox1.MaximumSize = new System.Drawing.Size(260, 22);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 22);
-            this.textBox1.TabIndex = 4;
+            this.txtContraseniaIniSes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtContraseniaIniSes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseniaIniSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseniaIniSes.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtContraseniaIniSes.Location = new System.Drawing.Point(572, 368);
+            this.txtContraseniaIniSes.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtContraseniaIniSes.MaxLength = 30;
+            this.txtContraseniaIniSes.Name = "txtContraseniaIniSes";
+            this.txtContraseniaIniSes.PasswordChar = '*';
+            this.txtContraseniaIniSes.Size = new System.Drawing.Size(205, 22);
+            this.txtContraseniaIniSes.TabIndex = 5;
             // 
-            // pictureBox4
+            // txtUsuarioIniSes
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::Visual.Properties.Resources.regis2;
-            this.pictureBox4.Location = new System.Drawing.Point(612, 512);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(107, 32);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(105, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            this.txtUsuarioIniSes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.txtUsuarioIniSes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuarioIniSes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioIniSes.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtUsuarioIniSes.Location = new System.Drawing.Point(572, 298);
+            this.txtUsuarioIniSes.MaximumSize = new System.Drawing.Size(260, 22);
+            this.txtUsuarioIniSes.MaxLength = 30;
+            this.txtUsuarioIniSes.Name = "txtUsuarioIniSes";
+            this.txtUsuarioIniSes.Size = new System.Drawing.Size(205, 22);
+            this.txtUsuarioIniSes.TabIndex = 4;
             // 
-            // pictureBox3
+            // btnRegistrar
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Visual.Properties.Resources.botonis;
-            this.pictureBox3.Location = new System.Drawing.Point(582, 437);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(162, 56);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 56);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.Image = global::Visual.Properties.Resources.regis2;
+            this.btnRegistrar.Location = new System.Drawing.Point(612, 512);
+            this.btnRegistrar.MaximumSize = new System.Drawing.Size(107, 32);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(105, 32);
+            this.btnRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRegistrar.TabIndex = 3;
+            this.btnRegistrar.TabStop = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
             // 
-            // pictureBox2
+            // btnIniciar
             // 
-            this.pictureBox2.Image = global::Visual.Properties.Resources.IS;
-            this.pictureBox2.Location = new System.Drawing.Point(437, 173);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(427, 397);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
+            this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIniciar.Image = global::Visual.Properties.Resources.botonis;
+            this.btnIniciar.Location = new System.Drawing.Point(582, 437);
+            this.btnIniciar.MaximumSize = new System.Drawing.Size(162, 56);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(160, 56);
+            this.btnIniciar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnIniciar.TabIndex = 2;
+            this.btnIniciar.TabStop = false;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // pictureBox1
+            // pbLogoIniciarSes
             // 
-            this.pictureBox1.Image = global::Visual.Properties.Resources.sesion;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 188);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(415, 348);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbLogoIniciarSes.Image = global::Visual.Properties.Resources.IS;
+            this.pbLogoIniciarSes.Location = new System.Drawing.Point(437, 173);
+            this.pbLogoIniciarSes.Name = "pbLogoIniciarSes";
+            this.pbLogoIniciarSes.Size = new System.Drawing.Size(427, 397);
+            this.pbLogoIniciarSes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoIniciarSes.TabIndex = 1;
+            this.pbLogoIniciarSes.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::Visual.Properties.Resources.sesion;
+            this.pbLogo.Location = new System.Drawing.Point(3, 188);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(415, 348);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // vtnIniciarSesion
             // 
@@ -440,13 +461,13 @@ namespace Visual
             this.panelBarraTop.ResumeLayout(false);
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRegistr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegistrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIniciar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoIniciarSes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,27 +477,28 @@ namespace Visual
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Panel panelBarraTop;
         private System.Windows.Forms.Panel panelCentral;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.PictureBox pbLogoIniciarSes;
+        private System.Windows.Forms.PictureBox btnIniciar;
+        private System.Windows.Forms.PictureBox btnRegistrar;
+        private System.Windows.Forms.TextBox txtUsuarioIniSes;
+        private System.Windows.Forms.TextBox txtContraseniaIniSes;
+        private System.Windows.Forms.PictureBox btnRegistrarse;
+        private System.Windows.Forms.TextBox txtAltura;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtTarjCredito;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtRecContrasenia;
+        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox pbRegistr;
+        private System.Windows.Forms.PictureBox btnVolver;
+        private System.Windows.Forms.ComboBox cbxSexo;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.TextBox txtCiudad;
     }
 }
 
