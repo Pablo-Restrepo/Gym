@@ -43,10 +43,13 @@ namespace Visual
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form1();
-            this.Hide();
-            formulario.ShowDialog();
-            this.Close();
+            if (comprobarContrasenia())
+            {
+                Form formulario = new Form1();
+                this.Hide();
+                formulario.ShowDialog();
+                this.Close();
+            }
         }
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
@@ -76,79 +79,81 @@ namespace Visual
             OracleConnection miConexion = new OracleConnection();
             string sql = "";
             int inserto = 0;
-            if (txtContrasenia.Equals(txtRecContrasenia)) { 
-                
-            }
-            else
-            {
-                MessageBox.Show("Error!. La contraseña es erronea. Retificar.");
-            }
-
-            if (!comprobarUsuario())
-            {
-                MessageBox.Show("ta bien el user");
-            }
-            else
-            {
-                MessageBox.Show("Error!. El usuario ya existe. Use otro.");
-            }
-
-            try
-            {
-                miConexion.ConnectionString = connectionString;
-                miConexion.Open();
-
-                sql = "INSERT INTO PERSONA (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text +"','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + ")";
-                OracleCommand sqlInsert = new OracleCommand(sql);
-                sqlInsert.Connection = miConexion;
-                inserto = sqlInsert.ExecuteNonQuery();
-
-                sql = "INSERT INTO CLIENTE (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA,CLI_TARJETACREDITO,CLI_CIUDAD) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + "," + txtTarjCredito.Text + ",'" + txtCiudad.Text + "')";
-                OracleCommand sqlInsert2 = new OracleCommand(sql);
-                sqlInsert2.Connection = miConexion;
-                inserto = sqlInsert2.ExecuteNonQuery();
-
-                sql = "INSERT INTO USUARIO (USU_LOGIN,PER_CEDULA,USU_PASSWORD,USU_CORREO) VALUES ('" + txtUsuario.Text + "'," + txtCedula.Text +  ",'" + txtContrasenia.Text + "','" + txtCorreo.Text + "')";
-                OracleCommand sqlInsert3 = new OracleCommand(sql);
-                sqlInsert3.Connection = miConexion;
-                inserto = sqlInsert3.ExecuteNonQuery();
-
-                sql = "UPDATE CLIENTE SET USU_LOGIN = '" + txtUsuario.Text + "' WHERE PER_CEDULA = " + txtCedula.Text;
-                OracleCommand sqlInsert4 = new OracleCommand(sql);
-                sqlInsert4.Connection = miConexion;
-                inserto = sqlInsert4.ExecuteNonQuery();
-
-                if (inserto > 0)
+            if (txtContrasenia.Text.Equals(txtRecContrasenia.Text)) {
+                if (!comprobarUsuario())
                 {
-                    MessageBox.Show("Se registro correctamente!");
+                    if (!comprobarCedula())
+                    {
+                        try
+                        {
+                            miConexion.ConnectionString = connectionString;
+                            miConexion.Open();
+
+                            sql = "INSERT INTO PERSONA (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + ")";
+                            OracleCommand sqlInsert = new OracleCommand(sql);
+                            sqlInsert.Connection = miConexion;
+                            inserto = sqlInsert.ExecuteNonQuery();
+
+                            sql = "INSERT INTO CLIENTE (PER_CEDULA,PER_NOMBRE,PER_APELLIDO,PER_FECHANACI,PER_SEXO,PER_PESO,PER_ALTURA,CLI_TARJETACREDITO,CLI_CIUDAD) VALUES (" + txtCedula.Text + ",'" + txtNombre.Text + "','" + txtApellido.Text + "','" + dtpFechaNacimiento.Text + "','" + cbxSexo.Text + "'," + txtPeso.Text + "," + txtAltura.Text + "," + txtTarjCredito.Text + ",'" + txtCiudad.Text + "')";
+                            OracleCommand sqlInsert2 = new OracleCommand(sql);
+                            sqlInsert2.Connection = miConexion;
+                            inserto = sqlInsert2.ExecuteNonQuery();
+
+                            sql = "INSERT INTO USUARIO (USU_LOGIN,PER_CEDULA,USU_PASSWORD,USU_CORREO) VALUES ('" + txtUsuario.Text + "'," + txtCedula.Text + ",'" + txtContrasenia.Text + "','" + txtCorreo.Text + "')";
+                            OracleCommand sqlInsert3 = new OracleCommand(sql);
+                            sqlInsert3.Connection = miConexion;
+                            inserto = sqlInsert3.ExecuteNonQuery();
+
+                            sql = "UPDATE CLIENTE SET USU_LOGIN = '" + txtUsuario.Text + "' WHERE PER_CEDULA = " + txtCedula.Text;
+                            OracleCommand sqlInsert4 = new OracleCommand(sql);
+                            sqlInsert4.Connection = miConexion;
+                            inserto = sqlInsert4.ExecuteNonQuery();
+
+                            if (inserto > 0)
+                            {
+                                MessageBox.Show("Se registro correctamente!");
+                                pbLogo.Visible = true;
+                                pbLogoIniciarSes.Visible = true;
+                                btnRegistrarse.Visible = false;
+                                cbxSexo.Visible = false;
+                                dtpFechaNacimiento.Visible = false;
+                                txtUsuario.Visible = false;
+                                txtCiudad.Visible = false;
+                                txtContrasenia.Visible = false;
+                                txtRecContrasenia.Visible = false;
+                                txtCorreo.Visible = false;
+                                txtTarjCredito.Visible = false;
+                                txtNombre.Visible = false;
+                                txtApellido.Visible = false;
+                                txtCedula.Visible = false;
+                                txtPeso.Visible = false;
+                                txtAltura.Visible = false;
+                                pbRegistr.Visible = false;
+                                btnVolver.Visible = false;
+                            }
+                            miConexion.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            miConexion.Close();
+
+                            MessageBox.Show("Ocurrió un error: " + ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error!. El numero de cedula ya tiene asociado un usuario.");
+                    }
                 }
-                miConexion.Close();
+                else
+                {
+                    MessageBox.Show("Error!. El usuario ya existe. Use otro.");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                miConexion.Close();
-
-                MessageBox.Show("Ocurrió un error: " + ex.Message);
-            }
-
-            pbLogo.Visible = true;
-            pbLogoIniciarSes.Visible = true;
-            btnRegistrarse.Visible = false;
-            cbxSexo.Visible = false;
-            dtpFechaNacimiento.Visible = false;
-            txtUsuario.Visible = false;
-            txtCiudad.Visible = false;
-            txtContrasenia.Visible = false;
-            txtRecContrasenia.Visible = false;
-            txtCorreo.Visible = false;
-            txtTarjCredito.Visible = false;
-            txtNombre.Visible = false;
-            txtApellido.Visible = false;
-            txtCedula.Visible = false;
-            txtPeso.Visible = false;
-            txtAltura.Visible = false;
-            pbRegistr.Visible = false;
-            btnVolver.Visible = false;
+                MessageBox.Show("Error!. La contraseña es erronea. Rectificar.");
+            } 
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -175,26 +180,90 @@ namespace Visual
         private Boolean comprobarUsuario()
         {
             OracleConnection miConexion = new OracleConnection();
-            miConexion.ConnectionString = connectionString;
-            miConexion.Open();
-            string sql = "";
-            int inserto = 0;
-            sql = "SELECT USU_LOGIN FROM USUARIO WHERE USU_LOGIN = '" + txtUsuario.Text + "'";
-            OracleCommand sqlInsert = new OracleCommand(sql);
-            sqlInsert.Connection = miConexion;
-            inserto = sqlInsert.ExecuteNonQuery();
-
-            if (inserto > 0)
+            try
             {
-                MessageBox.Show("Se registro correctamente!");
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT USU_LOGIN FROM USUARIO WHERE USU_LOGIN = '" + txtUsuario.Text + "'";
+                OracleCommand sqlInsert = new OracleCommand(sql);
+                sqlInsert.Connection = miConexion;
+
+                if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuario.Text))
+                {
+                    return true;
+                }
+
+                miConexion.Close();
             }
-            
-            if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuario.Text))
+            catch (Exception ex)
             {
-                return true;
+                miConexion.Close();
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
 
-            miConexion.Close();
+            return false;
+        }
+        private Boolean comprobarCedula()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT PER_CEDULA FROM CLIENTE WHERE PER_CEDULA = " + txtCedula.Text;
+                OracleCommand sqlInsert = new OracleCommand(sql);
+                sqlInsert.Connection = miConexion;
+
+                if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtCedula.Text))
+                {
+                    return true;
+                }
+
+                miConexion.Close();
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
+
+            return false;
+        }
+        private Boolean comprobarContrasenia()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT USU_LOGIN, USU_PASSWORD FROM USUARIO WHERE USU_LOGIN = '" + txtUsuarioIniSes.Text + "' AND USU_PASSWORD ='" + txtContraseniaIniSes.Text + "'";
+                OracleCommand sqlInsert = new OracleCommand(sql);
+                sqlInsert.Connection = miConexion;
+
+                if (txtUsuarioIniSes.Text.Equals("") || txtContraseniaIniSes.Text.Equals(""))
+                {
+                    MessageBox.Show("Los campos estan vacios.");
+                }
+                else if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuarioIniSes.Text))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("El usuario o contraseña estan incorrectos.");
+                }
+
+                miConexion.Close();
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+            }
 
             return false;
         }
