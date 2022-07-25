@@ -147,7 +147,7 @@ namespace Visual
                 }
                 else
                 {
-                    MessageBox.Show("Error!. El usuario ya existe. Use otro.");
+                    
                 }
             }
             else
@@ -189,8 +189,17 @@ namespace Visual
                 OracleCommand sqlInsert = new OracleCommand(sql);
                 sqlInsert.Connection = miConexion;
 
-                if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuario.Text))
+                if (!txtUsuario.Text.Equals(""))
                 {
+                    if (Convert.ToString(sqlInsert.ExecuteScalar()).Equals(txtUsuario.Text))
+                    {
+                        MessageBox.Show("Error!. El usuario ya existe. Use otro.");
+                        return true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hay espacios vacios");
                     return true;
                 }
 
