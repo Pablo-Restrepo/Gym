@@ -12,7 +12,6 @@ namespace Proyecto.modelo
         private string prodNombre;
         private float prodPrecio;
         private int prodCantidad;
-        //private string prodFoto;
         private byte[] prodFoto = new byte[0];
         private string prodTipoProd;
 

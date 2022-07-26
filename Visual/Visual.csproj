@@ -121,6 +121,12 @@
     <Compile Include="vtnAlimentacion.Designer.cs">
       <DependentUpon>vtnAlimentacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="vtnProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnProducto.Designer.cs">
+      <DependentUpon>vtnProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtnTrenSu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vtnAlimentacion.resx">
       <DependentUpon>vtnAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnProducto.resx">
+      <DependentUpon>vtnProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnTrenSu.resx">
       <DependentUpon>vtnTrenSu.cs</DependentUpon>
@@ -441,6 +450,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\regitrarsefinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

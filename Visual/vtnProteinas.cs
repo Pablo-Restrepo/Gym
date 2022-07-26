@@ -16,7 +16,15 @@ namespace Visual
 {
     public partial class vtnProteinas : Form
     {
+
         String connectionString = "Data Source=localhost:1521/xe;User Id=pablo;Password=oracle";
+        List<clsProducto> datos = new List<clsProducto>();
+        MemoryStream ms = new MemoryStream();
+        byte[] MisDatos = new byte[0];
+        Panel p = new Panel();
+        Label title = new Label();
+        Label costo = new Label();
+
         public vtnProteinas()
         {
             InitializeComponent();
@@ -25,10 +33,9 @@ namespace Visual
         private void vtnProteinas_Load(object sender, EventArgs e)
         {
             limpiar();
+            generarProductos();
         }
-        List<clsProducto> datos = new List<clsProducto>();
-        MemoryStream ms = new MemoryStream();
-        byte[] MisDatos = new byte[0];
+        
         private void limpiar()
         {
             DataSet dataSet = new DataSet();
@@ -51,20 +58,19 @@ namespace Visual
                 for (int j = 0; j < dataSet.Tables[0].Rows.Count; j++)
                 {
                     clsProducto cartel = new clsProducto();
+                    cartel.ProdCodBarras = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[0].ToString());
                     cartel.ProdNombre = dataSet.Tables[0].Rows[j].ItemArray[2].ToString();
-                    cartel.ProdFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[5];
                     cartel.ProdPrecio = float.Parse(dataSet.Tables[0].Rows[j].ItemArray[3].ToString());
+                    cartel.ProdCantidad = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[4].ToString());
+                    cartel.ProdFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[5];
+                    
                     datos.Add(cartel);
                 }
             }
         }
 
-        private void btngenerar_Click(object sender, EventArgs e)
+        private void generarProductos()
         {
-            PictureBox p = new PictureBox();
-            Label title = new Label();
-            Label costo = new Label();
-            
             int posX, posY;
             int ancho, alto;
 
@@ -80,21 +86,26 @@ namespace Visual
 
             for (int i = 0; i < datos.Count; i++)
             {
-                p = new PictureBox();
+                p = new Panel();
                 title = new Label();
                 costo = new Label();
                 cant++;
+
                 ms = new MemoryStream(datos[i].ProdFoto);
-                p.Image = Image.FromStream(ms);
-                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                p.BackgroundImage = Image.FromStream(ms);
+                p.BackgroundImageLayout = ImageLayout.Stretch;
+                p.TabIndex = i;
                 p.Size = new Size(ancho, alto);
+                p.Cursor = Cursors.Hand;
 
                 title.Text = datos[i].ProdNombre;
-                title.BackColor = Color.Red;
+                title.BackColor = Color.Black;
                 title.ForeColor = Color.White;
+                title.TabIndex = i;
 
                 costo.Text = datos[i].ProdPrecio.ToString();
-                costo.BackColor = Color.Orange;
+                costo.BackColor = Color.Green;
+                costo.TabIndex = i;
 
                 p.Controls.Add(title);
                 p.Controls.Add(costo);
@@ -115,7 +126,39 @@ namespace Visual
                     posX = 0;
                     posY = posY + alto;
                 }
+                p.Click += new EventHandler(cliquear);
+                title.Click += new EventHandler(cliquear);
+                costo.Click += new EventHandler(cliquear);
             }
+        }
+        private void cliquear(object sender, EventArgs e)
+        {
+            p = new Panel();
+            p = (Panel)sender;
+            limpiar();
+            vtnProducto a = new vtnProducto();
+            a.lblNombreProducto.Text = datos[p.TabIndex].ProdNombre;
+            a.lblCantidad.Text = datos[p.TabIndex].ProdCantidad.ToString();
+            a.lblPrecio.Text = datos[p.TabIndex].ProdPrecio.ToString();
+            a.lblCodBarras.Text = datos[p.TabIndex].ProdCodBarras.ToString();
+            ms = new MemoryStream(datos[p.TabIndex].ProdFoto);
+            a.pbProducto.Image = Image.FromStream(ms);
+
+            abrirFormHija(a);
+        }
+        private void abrirFormHija(object formHija)
+        {
+            if (this.panelCentro.Controls.Count > 0)
+            {
+                this.panelCentro.Controls.Clear();
+            }
+ 
+            Form fH = formHija as Form;
+            fH.TopLevel = false;
+            fH.Dock = DockStyle.Fill;
+            this.panelCentro.Controls.Add(fH);
+            this.panelCentro.Tag = fH;
+            fH.Show();
         }
     }
 }
