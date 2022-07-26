@@ -102,7 +102,7 @@ namespace Visual
             posY = 0;
 
             int cant = 0;
-            int incrementa = 4;
+            int incrementa = 5;
 
             for (int i = 0; i < datos.Count; i++)
             {
@@ -119,11 +119,13 @@ namespace Visual
                 p.Cursor = Cursors.Hand;
 
                 title.Text = datos[i].ProdNombre;
+                title.Font = new System.Drawing.Font("Montserrat SemiBold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 title.BackColor = Color.Black;
                 title.ForeColor = Color.White;
                 title.TabIndex = i;
 
-                costo.Text = datos[i].ProdPrecio.ToString();
+                costo.Text = "$"+datos[i].ProdPrecio.ToString();
+                costo.Font = new System.Drawing.Font("Montserrat SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 costo.BackColor = Color.Green;
                 costo.TabIndex = i;
 
@@ -137,14 +139,14 @@ namespace Visual
 
                 if (Pcontener.Controls.Count > 0)
                 {
-                    posX = posX + ancho;
+                    posX = posX + ancho + 38;
                 }
 
                 if (cant == incrementa)
                 {
-                    incrementa = incrementa + 4;
+                    incrementa = incrementa + 5;
                     posX = 0;
-                    posY = posY + alto;
+                    posY = posY + alto + 38;
                 }
                 p.Click += new EventHandler(cliquear);
                 title.Click += new EventHandler(cliquear);

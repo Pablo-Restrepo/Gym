@@ -36,17 +36,6 @@ namespace Visual
             this.panelCentro.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelCentro
-            // 
-            this.panelCentro.BackColor = System.Drawing.Color.Transparent;
-            this.panelCentro.Controls.Add(this.Pcontener);
-            this.panelCentro.Controls.Add(this.Adicional);
-            this.panelCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentro.Location = new System.Drawing.Point(0, 0);
-            this.panelCentro.Name = "panelCentro";
-            this.panelCentro.Size = new System.Drawing.Size(1052, 720);
-            this.panelCentro.TabIndex = 13;
-            // 
             // Adicional
             // 
             this.Adicional.BackColor = System.Drawing.Color.Transparent;
@@ -65,8 +54,19 @@ namespace Visual
             this.Pcontener.BackColor = System.Drawing.Color.Transparent;
             this.Pcontener.Location = new System.Drawing.Point(65, 150);
             this.Pcontener.Name = "Pcontener";
-            this.Pcontener.Size = new System.Drawing.Size(902, 508);
+            this.Pcontener.Size = new System.Drawing.Size(922, 508);
             this.Pcontener.TabIndex = 11;
+            // 
+            // panelCentro
+            // 
+            this.panelCentro.BackColor = System.Drawing.Color.Transparent;
+            this.panelCentro.Controls.Add(this.Pcontener);
+            this.panelCentro.Controls.Add(this.Adicional);
+            this.panelCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentro.Location = new System.Drawing.Point(0, 0);
+            this.panelCentro.Name = "panelCentro";
+            this.panelCentro.Size = new System.Drawing.Size(1052, 720);
+            this.panelCentro.TabIndex = 13;
             // 
             // vtnProteinas
             // 
