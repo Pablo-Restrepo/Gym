@@ -98,7 +98,7 @@ namespace Visual
             // 
             this.pictureBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox20.Image = global::Visual.Properties.Resources.Linea;
             this.pictureBox20.Location = new System.Drawing.Point(12, 598);
             this.pictureBox20.Name = "pictureBox20";
@@ -163,7 +163,7 @@ namespace Visual
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox15.Image = global::Visual.Properties.Resources.Linea;
             this.pictureBox15.Location = new System.Drawing.Point(12, 203);
             this.pictureBox15.Name = "pictureBox15";

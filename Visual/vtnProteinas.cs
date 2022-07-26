@@ -149,8 +149,6 @@ namespace Visual
                     posY = posY + alto + 38;
                 }
                 p.Click += new EventHandler(cliquear);
-                title.Click += new EventHandler(cliquear);
-                costo.Click += new EventHandler(cliquear);
             }
         }
         private void cliquear(object sender, EventArgs e)
@@ -171,6 +169,8 @@ namespace Visual
             a.lblProveTelef.Text = "Telefono: " + datosp[p.TabIndex].ProveTelefono.ToString();
             a.lblProveDirecc.Text = "Direccion: " + datosp[p.TabIndex].ProveDireccion.ToString();
             a.lblProvCorreo.Text = "Correo: " + datosp[p.TabIndex].ProveCorreo.ToString();
+
+            a.aux = "p";
 
             abrirFormHija(a);
         }

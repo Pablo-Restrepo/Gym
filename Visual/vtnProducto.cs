@@ -19,7 +19,7 @@ namespace Visual
     {
 
         String connectionString = UserCache.conexion;
-
+        public String aux = "";
         public vtnProducto()
         {
             InitializeComponent();
@@ -32,7 +32,19 @@ namespace Visual
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new vtnProteinas());
+            if (aux == "m")
+            {
+                abrirFormHija(new vtnMaquinas());
+            }
+            else if (aux == "p")
+            {
+                abrirFormHija(new vtnProteinas());
+            }
+            else
+            {
+                abrirFormHija(new vtnOtrosP());
+            }
+            
         }
         private void abrirFormHija(object formHija)
         {
