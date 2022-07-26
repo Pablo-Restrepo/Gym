@@ -10,7 +10,7 @@ namespace Proyecto.modelo
     {
         public int ProveNit;
         public string ProveNombre;
-        public int ProveTelefono;
+        public long ProveTelefono;
         public string ProveDireccion;
         public string ProveCorreo;
 

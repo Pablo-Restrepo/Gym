@@ -29,5 +29,28 @@ namespace Visual
 
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new vtnProteinas());
+        }
+        private void abrirFormHija(object formHija)
+        {
+            if (this.panelCentro.Controls.Count > 0)
+            {
+                this.panelCentro.Controls.Clear();
+            }
+
+            Form fH = formHija as Form;
+            fH.TopLevel = false;
+            fH.Dock = DockStyle.Fill;
+            this.panelCentro.Controls.Add(fH);
+            this.panelCentro.Tag = fH;
+            fH.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Comprado!");
+        }
     }
 }

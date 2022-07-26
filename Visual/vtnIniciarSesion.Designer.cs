@@ -191,7 +191,7 @@ namespace Visual
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Transparent;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolver.Image = global::Visual.Properties.Resources.pngegg;
+            this.btnVolver.Image = global::Visual.Properties.Resources.volver;
             this.btnVolver.Location = new System.Drawing.Point(40, 40);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(50, 50);

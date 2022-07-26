@@ -19,6 +19,7 @@ namespace Visual
 
         String connectionString = "Data Source=localhost:1521/xe;User Id=pablo;Password=oracle";
         List<clsProducto> datos = new List<clsProducto>();
+        List<clsProveedor> datosp = new List<clsProveedor>();
         MemoryStream ms = new MemoryStream();
         byte[] MisDatos = new byte[0];
         Panel p = new Panel();
@@ -42,7 +43,7 @@ namespace Visual
             OracleConnection miConexion = new OracleConnection();
             miConexion.ConnectionString = connectionString;
             miConexion.Open();
-            string sql = "SELECT * FROM PRODUCTO";
+            string sql = "SELECT * FROM PRODUCTO INNER JOIN PROVEEDOR ON PRODUCTO.PROVE_NIT = PROVEEDOR.PROVE_NIT";
             OracleCommand sqlSelect = new OracleCommand(sql);
             sqlSelect.CommandType = CommandType.Text;
             sqlSelect.Connection = miConexion;
@@ -58,6 +59,7 @@ namespace Visual
                 for (int j = 0; j < dataSet.Tables[0].Rows.Count; j++)
                 {
                     clsProducto cartel = new clsProducto();
+
                     cartel.ProdCodBarras = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[0].ToString());
                     cartel.ProdNombre = dataSet.Tables[0].Rows[j].ItemArray[2].ToString();
                     cartel.ProdPrecio = float.Parse(dataSet.Tables[0].Rows[j].ItemArray[3].ToString());
@@ -65,6 +67,16 @@ namespace Visual
                     cartel.ProdFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[5];
                     
                     datos.Add(cartel);
+
+                    clsProveedor cartelp = new clsProveedor();
+
+                    cartelp.ProveNit = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[7].ToString());
+                    cartelp.ProveNombre = dataSet.Tables[0].Rows[j].ItemArray[8].ToString();
+                    cartelp.ProveTelefono = long.Parse(dataSet.Tables[0].Rows[j].ItemArray[9].ToString());
+                    cartelp.ProveDireccion = dataSet.Tables[0].Rows[j].ItemArray[10].ToString();
+                    cartelp.ProveCorreo = dataSet.Tables[0].Rows[j].ItemArray[11].ToString();
+
+                    datosp.Add(cartelp);
                 }
             }
         }
@@ -138,11 +150,17 @@ namespace Visual
             limpiar();
             vtnProducto a = new vtnProducto();
             a.lblNombreProducto.Text = datos[p.TabIndex].ProdNombre;
-            a.lblCantidad.Text = datos[p.TabIndex].ProdCantidad.ToString();
-            a.lblPrecio.Text = datos[p.TabIndex].ProdPrecio.ToString();
-            a.lblCodBarras.Text = datos[p.TabIndex].ProdCodBarras.ToString();
+            a.lblCantidad.Text = "Cantidad: " + datos[p.TabIndex].ProdCantidad.ToString();
+            a.lblPrecio.Text = "Precio: " + datos[p.TabIndex].ProdPrecio.ToString();
+            a.lblCodBarras.Text = "Co. Barras: " + datos[p.TabIndex].ProdCodBarras.ToString();
             ms = new MemoryStream(datos[p.TabIndex].ProdFoto);
             a.pbProducto.Image = Image.FromStream(ms);
+
+            a.lblProNIT.Text = "NIT:  " + datosp[p.TabIndex].ProveNit.ToString();
+            a.lblProveMonbre.Text = "Proveedor: " + datosp[p.TabIndex].ProveNombre.ToString();
+            a.lblProveTelef.Text = "Telefono: " + datosp[p.TabIndex].ProveTelefono.ToString();
+            a.lblProveDirecc.Text = "Direccion: " + datosp[p.TabIndex].ProveDireccion.ToString();
+            a.lblProvCorreo.Text = "Correo: " + datosp[p.TabIndex].ProveCorreo.ToString();
 
             abrirFormHija(a);
         }
