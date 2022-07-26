@@ -8,7 +8,7 @@ namespace Proyecto.modelo
 {
     class clsUsuario
     {
-        public string UsuLogin;
+        public string usuLogin;
         public string UsuPassword;
         public string UsuCorreo;
 
@@ -73,5 +73,6 @@ namespace Proyecto.modelo
         }
         public System.Collections.ArrayList Compra;
         public System.Collections.ArrayList Compra1;
+
     }
 }

@@ -11,13 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Visual.modelo;
 
 namespace Visual
 {
     public partial class vtnProteinas : Form
     {
-
-        String connectionString = "Data Source=localhost:1521/xe;User Id=pablo;Password=oracle";
+        String connectionString = UserCache.conexion;
         List<clsProducto> datos = new List<clsProducto>();
         List<clsProveedor> datosp = new List<clsProveedor>();
         MemoryStream ms = new MemoryStream();
@@ -43,7 +43,7 @@ namespace Visual
             OracleConnection miConexion = new OracleConnection();
             miConexion.ConnectionString = connectionString;
             miConexion.Open();
-            string sql = "SELECT * FROM PRODUCTO INNER JOIN PROVEEDOR ON PRODUCTO.PROVE_NIT = PROVEEDOR.PROVE_NIT";
+            string sql = "SELECT * FROM PRODUCTO INNER JOIN PROVEEDOR ON PRODUCTO.PROVE_NIT = PROVEEDOR.PROVE_NIT WHERE PROD_TIPOPROD = 'proteina'";
             OracleCommand sqlSelect = new OracleCommand(sql);
             sqlSelect.CommandType = CommandType.Text;
             sqlSelect.Connection = miConexion;
@@ -64,8 +64,16 @@ namespace Visual
                     cartel.ProdNombre = dataSet.Tables[0].Rows[j].ItemArray[2].ToString();
                     cartel.ProdPrecio = float.Parse(dataSet.Tables[0].Rows[j].ItemArray[3].ToString());
                     cartel.ProdCantidad = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[4].ToString());
-                    cartel.ProdFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[5];
-                    
+                    if (dataSet.Tables[0].Rows[j].ItemArray[5].ToString().Equals(""))
+                    {
+                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        cartel.ProdFoto = imagen;
+                    }
+                    else
+                    {
+                        cartel.ProdFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[5];
+                    }
+
                     datos.Add(cartel);
 
                     clsProveedor cartelp = new clsProveedor();
@@ -150,9 +158,9 @@ namespace Visual
             limpiar();
             vtnProducto a = new vtnProducto();
             a.lblNombreProducto.Text = datos[p.TabIndex].ProdNombre;
-            a.lblCantidad.Text = "Cantidad: " + datos[p.TabIndex].ProdCantidad.ToString();
-            a.lblPrecio.Text = "Precio: " + datos[p.TabIndex].ProdPrecio.ToString();
-            a.lblCodBarras.Text = "Co. Barras: " + datos[p.TabIndex].ProdCodBarras.ToString();
+            a.lblCantidad.Text = datos[p.TabIndex].ProdCantidad.ToString();
+            a.lblPrecio.Text = datos[p.TabIndex].ProdPrecio.ToString();
+            a.lblCodBarras.Text = datos[p.TabIndex].ProdCodBarras.ToString();
             ms = new MemoryStream(datos[p.TabIndex].ProdFoto);
             a.pbProducto.Image = Image.FromStream(ms);
 

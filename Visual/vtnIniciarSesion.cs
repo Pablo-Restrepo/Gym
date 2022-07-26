@@ -1,4 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using Proyecto.modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,12 +10,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Visual.modelo;
 
 namespace Visual
 {
     public partial class vtnIniciarSesion : Form
     {
-        String connectionString = "Data Source=localhost:1521/xe;User Id=pablo;Password=oracle";
+        String connectionString = UserCache.conexion;
         public vtnIniciarSesion()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace Visual
         {
             if (comprobarContrasenia())
             {
+                UserCache.User = txtUsuarioIniSes.Text;
                 Form formulario = new Form1();
                 this.Hide();
                 formulario.ShowDialog();

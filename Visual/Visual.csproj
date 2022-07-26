@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\Datos.cs" />
+    <Compile Include="modelo\UserCache.cs" />
     <Compile Include="modelo\clsAdicional.cs" />
     <Compile Include="modelo\clsCliente.cs" />
     <Compile Include="modelo\clsEjercicio.cs" />
@@ -459,6 +460,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\comprar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

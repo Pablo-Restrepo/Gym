@@ -37,6 +37,9 @@ namespace Visual
             this.lblCodBarras = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.panelCentro = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblProvCorreo = new System.Windows.Forms.Label();
             this.lblProveDirecc = new System.Windows.Forms.Label();
@@ -90,7 +93,7 @@ namespace Visual
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
             this.lblCantidad.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(423, 235);
+            this.lblCantidad.Location = new System.Drawing.Point(641, 237);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(79, 44);
             this.lblCantidad.TabIndex = 7;
@@ -101,7 +104,7 @@ namespace Visual
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.BackColor = System.Drawing.Color.Transparent;
             this.lblPrecio.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(423, 289);
+            this.lblPrecio.Location = new System.Drawing.Point(641, 291);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(182, 44);
             this.lblPrecio.TabIndex = 8;
@@ -112,7 +115,7 @@ namespace Visual
             this.lblCodBarras.AutoSize = true;
             this.lblCodBarras.BackColor = System.Drawing.Color.Transparent;
             this.lblCodBarras.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodBarras.Location = new System.Drawing.Point(423, 345);
+            this.lblCodBarras.Location = new System.Drawing.Point(641, 347);
             this.lblCodBarras.Name = "lblCodBarras";
             this.lblCodBarras.Size = new System.Drawing.Size(158, 44);
             this.lblCodBarras.TabIndex = 9;
@@ -134,6 +137,9 @@ namespace Visual
             // panelCentro
             // 
             this.panelCentro.BackColor = System.Drawing.Color.Transparent;
+            this.panelCentro.Controls.Add(this.label3);
+            this.panelCentro.Controls.Add(this.label2);
+            this.panelCentro.Controls.Add(this.label1);
             this.panelCentro.Controls.Add(this.pictureBox1);
             this.panelCentro.Controls.Add(this.lblProvCorreo);
             this.panelCentro.Controls.Add(this.lblProveDirecc);
@@ -152,6 +158,39 @@ namespace Visual
             this.panelCentro.Name = "panelCentro";
             this.panelCentro.Size = new System.Drawing.Size(1052, 720);
             this.panelCentro.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(429, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 44);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Cod. Barras:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(428, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 44);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Precio: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(428, 237);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 44);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Cantidad:";
             // 
             // pictureBox1
             // 
@@ -264,5 +303,8 @@ namespace Visual
         public System.Windows.Forms.Label lblProveMonbre;
         public System.Windows.Forms.Label lblProvCorreo;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
     }
 }
