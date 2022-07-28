@@ -14,7 +14,7 @@ namespace Proyecto.modelo
         public string MaqTipoMaquina;
         public string MaqMusculoTrabaja;
         public string MaqMarca;
-        public string MaqFoto;
+        public byte[] MaqFoto = new byte[0];
 
         public System.Collections.ArrayList ejercicio;
 

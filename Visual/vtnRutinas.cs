@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,7 @@ using Visual.modelo;
 
 namespace Visual
 {
-    public partial class vtnTrenIn : Form
+    public partial class vtnRutinas : Form
     {
         String connectionString = UserCache.conexion;
         List<clsEjercicio> datos = new List<clsEjercicio>();
@@ -24,15 +25,22 @@ namespace Visual
         Panel p = new Panel();
         Label title = new Label();
         Label costo = new Label();
-        public vtnTrenIn()
+        public String aux = "";
+        Boolean aux1 = true;
+        public vtnRutinas()
         {
             InitializeComponent();
         }
 
-        private void vtnTrenIn_Load(object sender, EventArgs e)
+        private void vtnProteinas_Load(object sender, EventArgs e)
         {
             limpiar();
             generarProductos();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new vtnRutina());
         }
         private void limpiar()
         {
@@ -40,7 +48,7 @@ namespace Visual
             OracleConnection miConexion = new OracleConnection();
             miConexion.ConnectionString = connectionString;
             miConexion.Open();
-            string sql = "SELECT * FROM EJERCICIO INNER JOIN MAQUINA ON EJERCICIO.MAQ_CODIGO = MAQUINA.MAQ_CODIGO WHERE EJER_TIPOTRENEJER= 'tren inferior'";
+            string sql = "SELECT * FROM TIENE2 INNER JOIN EJERCICIO ON  tiene2.ejer_codigo = ejercicio.ejer_codigo INNER JOIN MAQUINA ON ejercicio.maq_codigo = maquina.maq_codigo";
             OracleCommand sqlSelect = new OracleCommand(sql);
             sqlSelect.CommandType = CommandType.Text;
             sqlSelect.Connection = miConexion;
@@ -50,46 +58,46 @@ namespace Visual
                 dataAdapter.SelectCommand = sqlSelect;
                 dataAdapter.Fill(dataSet);
             }
-
+            miConexion.Close();
             if (dataSet.Tables[0].Rows.Count > 0)
             {
                 for (int j = 0; j < dataSet.Tables[0].Rows.Count; j++)
                 {
                     clsEjercicio cartel = new clsEjercicio();
 
-                    cartel.EjerSeries = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[3].ToString());
-                    cartel.EjerNombre = dataSet.Tables[0].Rows[j].ItemArray[2].ToString();
-                    cartel.EjerTipoTrenEjer = dataSet.Tables[0].Rows[j].ItemArray[9].ToString();
-                    cartel.EjerRepeSeries = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[4].ToString());
-                    cartel.EjerDescripcion = dataSet.Tables[0].Rows[j].ItemArray[6].ToString();
-                    cartel.EjerDescanso = dataSet.Tables[0].Rows[j].ItemArray[5].ToString();
+                    cartel.EjerSeries = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[5].ToString());
+                    cartel.EjerNombre = dataSet.Tables[0].Rows[j].ItemArray[4].ToString();
+                    cartel.EjerTipoTrenEjer = dataSet.Tables[0].Rows[j].ItemArray[11].ToString();
+                    cartel.EjerRepeSeries = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[5].ToString());
+                    cartel.EjerDescripcion = dataSet.Tables[0].Rows[j].ItemArray[8].ToString();
+                    cartel.EjerDescanso = dataSet.Tables[0].Rows[j].ItemArray[7].ToString();
 
-                    if (dataSet.Tables[0].Rows[j].ItemArray[8].ToString().Equals(""))
+                    if (dataSet.Tables[0].Rows[j].ItemArray[10].ToString().Equals(""))
                     {
                         byte[] imagen = File.ReadAllBytes("a\\default.png");
                         cartel.EjerFoto = imagen;
                     }
                     else
                     {
-                        cartel.EjerFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[8];
+                        cartel.EjerFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[10];
                     }
 
                     datos.Add(cartel);
 
                     clsMaquina cartelp = new clsMaquina();
 
-                    cartelp.MaqNombre = dataSet.Tables[0].Rows[j].ItemArray[11].ToString();
-                    cartelp.MaqMusculoTrabaja = dataSet.Tables[0].Rows[j].ItemArray[14].ToString();
-                    cartelp.MaqMarca = dataSet.Tables[0].Rows[j].ItemArray[15].ToString();
+                    cartelp.MaqNombre = dataSet.Tables[0].Rows[j].ItemArray[13].ToString();
+                    cartelp.MaqMusculoTrabaja = dataSet.Tables[0].Rows[j].ItemArray[16].ToString();
+                    cartelp.MaqMarca = dataSet.Tables[0].Rows[j].ItemArray[17].ToString();
 
-                    if (dataSet.Tables[0].Rows[j].ItemArray[16].ToString().Equals(""))
+                    if (dataSet.Tables[0].Rows[j].ItemArray[18].ToString().Equals(""))
                     {
                         byte[] imagen = File.ReadAllBytes("a\\default.png");
                         cartelp.MaqFoto = imagen;
                     }
                     else
                     {
-                        cartelp.MaqFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[16];
+                        cartelp.MaqFoto = (byte[])dataSet.Tables[0].Rows[j].ItemArray[18];
                     }
 
                     datosp.Add(cartelp);
@@ -105,7 +113,7 @@ namespace Visual
             Pcontener.Controls.Clear();
 
             ancho = (Pcontener.Width / 6);
-            alto = (Pcontener.Height / 3);
+            alto = (Pcontener.Height / 2);
             posX = 0;
             posY = 0;
 
@@ -179,7 +187,7 @@ namespace Visual
             ms = new MemoryStream(datosp[p.TabIndex].MaqFoto);
             a.pbMaquina.Image = Image.FromStream(ms);
 
-            a.aux = "i";
+            a.aux = "r";
 
             abrirFormHija(a);
         }
@@ -196,6 +204,31 @@ namespace Visual
             this.panelCentro.Controls.Add(fH);
             this.panelCentro.Tag = fH;
             fH.Show();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                DataSet dataSet = new DataSet();
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "INSERT INTO TIENE1(rut_id, usu_login) VALUES(" + idrutina.Text + ",'" + UserCache.User + "')";
+                OracleCommand sqlInsert = new OracleCommand(sql);
+                sqlInsert.Connection = miConexion;
+                int inserto = sqlInsert.ExecuteNonQuery();
+                if (inserto > 0)
+                {
+                    MessageBox.Show("Rutina Agregada!");
+                }
+                miConexion.Close();
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+                MessageBox.Show("Error!. Ya tienes esta rutina agregada!");
+            }
         }
     }
 }

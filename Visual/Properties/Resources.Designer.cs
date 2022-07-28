@@ -133,6 +133,16 @@ namespace Visual.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar {
+            get {
+                object obj = ResourceManager.GetObject("agregar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ali {
             get {
                 object obj = ResourceManager.GetObject("ali", resourceCulture);
@@ -236,6 +246,16 @@ namespace Visual.Properties {
         internal static System.Drawing.Bitmap cuadro {
             get {
                 object obj = ResourceManager.GetObject("cuadro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ejer {
+            get {
+                object obj = ResourceManager.GetObject("ejer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,7 +30,10 @@ namespace Visual
         private void InitializeComponent()
         {
             this.Adicional = new System.Windows.Forms.PictureBox();
+            this.panelCentro = new System.Windows.Forms.Panel();
+            this.Pcontener = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Adicional)).BeginInit();
+            this.panelCentro.SuspendLayout();
             this.SuspendLayout();
             // 
             // Adicional
@@ -38,12 +41,32 @@ namespace Visual
             this.Adicional.BackColor = System.Drawing.Color.Transparent;
             this.Adicional.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Adicional.Image = global::Visual.Properties.Resources.otross;
-            this.Adicional.Location = new System.Drawing.Point(2, 2);
+            this.Adicional.Location = new System.Drawing.Point(0, 0);
             this.Adicional.Name = "Adicional";
             this.Adicional.Size = new System.Drawing.Size(510, 163);
             this.Adicional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Adicional.TabIndex = 4;
             this.Adicional.TabStop = false;
+            // 
+            // panelCentro
+            // 
+            this.panelCentro.BackColor = System.Drawing.Color.Transparent;
+            this.panelCentro.Controls.Add(this.Pcontener);
+            this.panelCentro.Controls.Add(this.Adicional);
+            this.panelCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentro.Location = new System.Drawing.Point(0, 0);
+            this.panelCentro.Name = "panelCentro";
+            this.panelCentro.Size = new System.Drawing.Size(1052, 720);
+            this.panelCentro.TabIndex = 5;
+            // 
+            // Pcontener
+            // 
+            this.Pcontener.AutoScroll = true;
+            this.Pcontener.BackColor = System.Drawing.Color.Transparent;
+            this.Pcontener.Location = new System.Drawing.Point(63, 133);
+            this.Pcontener.Name = "Pcontener";
+            this.Pcontener.Size = new System.Drawing.Size(922, 508);
+            this.Pcontener.TabIndex = 12;
             // 
             // vtnOtrosE
             // 
@@ -53,7 +76,7 @@ namespace Visual
             this.BackgroundImage = global::Visual.Properties.Resources.Background__7_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1052, 720);
-            this.Controls.Add(this.Adicional);
+            this.Controls.Add(this.panelCentro);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -63,6 +86,7 @@ namespace Visual
             this.TransparencyKey = System.Drawing.Color.Green;
             this.Load += new System.EventHandler(this.vtnOtrosE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Adicional)).EndInit();
+            this.panelCentro.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -70,5 +94,7 @@ namespace Visual
         #endregion
 
         private System.Windows.Forms.PictureBox Adicional;
+        private System.Windows.Forms.Panel panelCentro;
+        private System.Windows.Forms.Panel Pcontener;
     }
 }

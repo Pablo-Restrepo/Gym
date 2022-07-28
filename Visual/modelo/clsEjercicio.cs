@@ -15,7 +15,7 @@ namespace Proyecto.modelo
         public string EjerDescanso;
         public string EjerDescripcion;
         public string EjerMusculoEjer;
-        public string EjerFoto;
+        public byte[] EjerFoto = new byte[0];
         public string EjerTipoTrenEjer;
 
         public System.Collections.ArrayList rutina;
