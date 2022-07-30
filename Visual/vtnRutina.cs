@@ -20,13 +20,10 @@ namespace Visual
         String connectionString = UserCache.conexion;
         List<clsRutina> datos = new List<clsRutina>();
         List<clsRutina> datos2 = new List<clsRutina>();
-        List<clsProveedor> datosp = new List<clsProveedor>();
         MemoryStream ms = new MemoryStream();
-        byte[] MisDatos = new byte[0];
         Panel p = new Panel();
         Label title = new Label();
         Label costo = new Label();
-        Boolean aux = true;
         public vtnRutina()
         {
             InitializeComponent();
