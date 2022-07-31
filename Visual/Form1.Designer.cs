@@ -33,12 +33,10 @@ namespace Visual
             this.AcercaDe = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
-            this.Nutricion = new System.Windows.Forms.PictureBox();
             this.Entrenador = new System.Windows.Forms.PictureBox();
             this.Comprar = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.Adicional = new System.Windows.Forms.PictureBox();
-            this.Buscar = new System.Windows.Forms.PictureBox();
             this.Inicio = new System.Windows.Forms.PictureBox();
             this.panelBarraTop = new System.Windows.Forms.Panel();
             this.btnTamanio2 = new System.Windows.Forms.Button();
@@ -50,12 +48,10 @@ namespace Visual
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nutricion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Entrenador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Comprar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Adicional)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inicio)).BeginInit();
             this.panelBarraTop.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +62,10 @@ namespace Visual
             this.menulVertical.Controls.Add(this.AcercaDe);
             this.menulVertical.Controls.Add(this.pictureBox20);
             this.menulVertical.Controls.Add(this.Salir);
-            this.menulVertical.Controls.Add(this.Nutricion);
             this.menulVertical.Controls.Add(this.Entrenador);
             this.menulVertical.Controls.Add(this.Comprar);
             this.menulVertical.Controls.Add(this.pictureBox15);
             this.menulVertical.Controls.Add(this.Adicional);
-            this.menulVertical.Controls.Add(this.Buscar);
             this.menulVertical.Controls.Add(this.Inicio);
             this.menulVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menulVertical.Location = new System.Drawing.Point(0, 34);
@@ -121,25 +115,12 @@ namespace Visual
             this.Salir.TabStop = false;
             this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
-            // Nutricion
-            // 
-            this.Nutricion.BackColor = System.Drawing.Color.Transparent;
-            this.Nutricion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nutricion.Image = global::Visual.Properties.Resources.Nutricion;
-            this.Nutricion.Location = new System.Drawing.Point(19, 359);
-            this.Nutricion.Name = "Nutricion";
-            this.Nutricion.Size = new System.Drawing.Size(142, 34);
-            this.Nutricion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Nutricion.TabIndex = 6;
-            this.Nutricion.TabStop = false;
-            this.Nutricion.Click += new System.EventHandler(this.Nutricion_Click);
-            // 
             // Entrenador
             // 
             this.Entrenador.BackColor = System.Drawing.Color.Transparent;
             this.Entrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Entrenador.Image = global::Visual.Properties.Resources.Entrenador;
-            this.Entrenador.Location = new System.Drawing.Point(19, 298);
+            this.Entrenador.Location = new System.Drawing.Point(16, 236);
             this.Entrenador.Name = "Entrenador";
             this.Entrenador.Size = new System.Drawing.Size(170, 38);
             this.Entrenador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +133,7 @@ namespace Visual
             this.Comprar.BackColor = System.Drawing.Color.Transparent;
             this.Comprar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Comprar.Image = global::Visual.Properties.Resources.Compras;
-            this.Comprar.Location = new System.Drawing.Point(19, 239);
+            this.Comprar.Location = new System.Drawing.Point(16, 177);
             this.Comprar.Name = "Comprar";
             this.Comprar.Size = new System.Drawing.Size(142, 37);
             this.Comprar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +146,7 @@ namespace Visual
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox15.Image = global::Visual.Properties.Resources.Linea;
-            this.pictureBox15.Location = new System.Drawing.Point(12, 203);
+            this.pictureBox15.Location = new System.Drawing.Point(9, 143);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(203, 10);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,26 +158,13 @@ namespace Visual
             this.Adicional.BackColor = System.Drawing.Color.Transparent;
             this.Adicional.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Adicional.Image = global::Visual.Properties.Resources.Adicionales;
-            this.Adicional.Location = new System.Drawing.Point(22, 145);
+            this.Adicional.Location = new System.Drawing.Point(20, 85);
             this.Adicional.Name = "Adicional";
             this.Adicional.Size = new System.Drawing.Size(179, 35);
             this.Adicional.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Adicional.TabIndex = 2;
             this.Adicional.TabStop = false;
             this.Adicional.Click += new System.EventHandler(this.Adicional_Click);
-            // 
-            // Buscar
-            // 
-            this.Buscar.BackColor = System.Drawing.Color.Transparent;
-            this.Buscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Buscar.Image = global::Visual.Properties.Resources.Buscar;
-            this.Buscar.Location = new System.Drawing.Point(19, 89);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(130, 32);
-            this.Buscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Buscar.TabIndex = 1;
-            this.Buscar.TabStop = false;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // Inicio
             // 
@@ -320,12 +288,10 @@ namespace Visual
             ((System.ComponentModel.ISupportInitialize)(this.AcercaDe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Nutricion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Entrenador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Comprar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Adicional)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Buscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inicio)).EndInit();
             this.panelBarraTop.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -340,13 +306,11 @@ namespace Visual
         private System.Windows.Forms.Panel menulVertical;
         private System.Windows.Forms.PictureBox Inicio;
         private System.Windows.Forms.Panel panelBarraTop;
-        private System.Windows.Forms.PictureBox Buscar;
         private System.Windows.Forms.PictureBox Adicional;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox AcercaDe;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox Salir;
-        private System.Windows.Forms.PictureBox Nutricion;
         private System.Windows.Forms.PictureBox Entrenador;
         private System.Windows.Forms.PictureBox Comprar;
         private System.Windows.Forms.Panel panelCentral;

@@ -105,11 +105,6 @@ namespace Visual
             abrirFormHija(new vtnInicio());
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
-        {
-            abrirFormHija(new vtnBuscar());
-        }
-
         private void Adicional_Click(object sender, EventArgs e)
         {
             abrirFormHija(new vtnAdicional());
@@ -123,11 +118,6 @@ namespace Visual
         private void Entrenador_Click(object sender, EventArgs e)
         {
             abrirFormHija(new vtnEntrenador());
-        }
-
-        private void Nutricion_Click(object sender, EventArgs e)
-        {
-            abrirFormHija(new vtnNutricion());
         }
 
         private void AcercaDe_Click(object sender, EventArgs e)

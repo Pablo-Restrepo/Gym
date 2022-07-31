@@ -38,7 +38,7 @@ namespace Visual
             // Adicional
             // 
             this.Adicional.BackColor = System.Drawing.Color.Transparent;
-            this.Adicional.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Adicional.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Adicional.Image = global::Visual.Properties.Resources.acerca;
             this.Adicional.Location = new System.Drawing.Point(2, 2);
             this.Adicional.Name = "Adicional";

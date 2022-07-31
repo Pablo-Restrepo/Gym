@@ -182,12 +182,6 @@
     <Compile Include="vtnOtrosP.Designer.cs">
       <DependentUpon>vtnOtrosP.cs</DependentUpon>
     </Compile>
-    <Compile Include="vtnBuscar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vtnBuscar.Designer.cs">
-      <DependentUpon>vtnBuscar.cs</DependentUpon>
-    </Compile>
     <Compile Include="vtnAdicional.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,12 +199,6 @@
     </Compile>
     <Compile Include="vtnEntrenador.Designer.cs">
       <DependentUpon>vtnEntrenador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vtnNutricion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vtnNutricion.Designer.cs">
-      <DependentUpon>vtnNutricion.cs</DependentUpon>
     </Compile>
     <Compile Include="vtnAcercaDe.cs">
       <SubType>Form</SubType>
@@ -271,9 +259,6 @@
     <EmbeddedResource Include="vtnOtrosP.resx">
       <DependentUpon>vtnOtrosP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vtnBuscar.resx">
-      <DependentUpon>vtnBuscar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vtnAdicional.resx">
       <DependentUpon>vtnAdicional.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vtnEntrenador.resx">
       <DependentUpon>vtnEntrenador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vtnNutricion.resx">
-      <DependentUpon>vtnNutricion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnAcercaDe.resx">
       <DependentUpon>vtnAcercaDe.cs</DependentUpon>
@@ -489,6 +471,9 @@
     <None Include="Resources\comprar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plane.png" />
+    <None Include="Resources\planc.png" />
+    <None Include="Resources\planb.png" />
     <None Include="Resources\agregar.png" />
     <Content Include="Resources\default.png" />
     <None Include="Resources\ejer.png" />
