@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Visual.accesoDatos;
 using Oracle.ManagedDataAccess.Client;
+using Visual.modelo;
 
 namespace Visual
 {
     public partial class Form1 : Form
     {
         private object aux = 1;
-
+        String connectionString = UserCache.conexion;
         public Form1()
         {
             InitializeComponent();
@@ -117,7 +118,14 @@ namespace Visual
 
         private void Entrenador_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new vtnEntrenador());
+            if (comprobar())
+            {
+                abrirFormHija(new vtnEntrenador());
+            }
+            else
+            {
+                MessageBox.Show("Compre un plan para continuar");
+            }
         }
 
         private void AcercaDe_Click(object sender, EventArgs e)
@@ -128,6 +136,38 @@ namespace Visual
         private void Salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private Boolean comprobar()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                DataSet dataSet = new DataSet();
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT * FROM compra WHERE usu_login = '" + UserCache.User + "'";
+                OracleCommand sqlSelect = new OracleCommand(sql);
+                sqlSelect.CommandType = CommandType.Text;
+                sqlSelect.Connection = miConexion;
+                using (OracleDataAdapter dataAdapter = new OracleDataAdapter())
+                {
+                    dataAdapter.SelectCommand = sqlSelect;
+                    dataAdapter.Fill(dataSet);
+                }
+                miConexion.Close();
+
+                if (dataSet.Tables[0].Rows[dataSet.Tables[0].Rows.Count - 1].ItemArray[1].ToString().Equals("Base2") || dataSet.Tables[0].Rows[dataSet.Tables[0].Rows.Count - 1].ItemArray[1].ToString().Equals("Base3"))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+                return false;
+            }
         }
     }
 }

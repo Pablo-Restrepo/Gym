@@ -135,16 +135,16 @@ namespace Visual
                     dataAdapter.Fill(dataSet);
                 }
                 miConexion.Close();
-                if (dataSet.Tables[0].Rows[0].ItemArray[1].ToString().Equals("Base"))
+                if (dataSet.Tables[0].Rows[dataSet.Tables[0].Rows.Count -1].ItemArray[1].ToString().Equals("Base"))
                 {
                     baseB = true;
                 }
-                else if (dataSet.Tables[0].Rows[0].ItemArray[1].ToString().Equals("Base2"))
+                else if (dataSet.Tables[0].Rows[dataSet.Tables[0].Rows.Count -1].ItemArray[1].ToString().Equals("Base2"))
                 {
                     baseB = true;
                     baseE = true;
                 }
-                else if (dataSet.Tables[0].Rows[0].ItemArray[1].ToString().Equals("Base3"))
+                else if (dataSet.Tables[0].Rows[dataSet.Tables[0].Rows.Count -1].ItemArray[1].ToString().Equals("Base3"))
                 {
                     baseB = true;
                     baseE = true;

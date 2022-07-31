@@ -15,6 +15,6 @@ namespace Proyecto.modelo
         public string PerSexo;
         public float PerPeso;
         public float PerAltura;
-        public string PerFoto;
+        public byte[] PerFoto = new byte[0];
     }
 }

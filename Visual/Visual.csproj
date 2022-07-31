@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\Datos.cs" />
+    <Compile Include="modelo\clsCurso.cs" />
+    <Compile Include="modelo\clsExamenMedico.cs" />
     <Compile Include="modelo\UserCache.cs" />
     <Compile Include="modelo\clsAdicional.cs" />
     <Compile Include="modelo\clsCliente.cs" />
@@ -133,6 +135,12 @@
     </Compile>
     <Compile Include="vtnPlanAlimentacion.Designer.cs">
       <DependentUpon>vtnPlanAlimentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnEntrenadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnEntrenadores.Designer.cs">
+      <DependentUpon>vtnEntrenadores.cs</DependentUpon>
     </Compile>
     <Compile Include="vtnRutinas.cs">
       <SubType>Form</SubType>
@@ -234,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vtnPlanAlimentacion.resx">
       <DependentUpon>vtnPlanAlimentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnEntrenadores.resx">
+      <DependentUpon>vtnEntrenadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnRutinas.resx">
       <DependentUpon>vtnRutinas.cs</DependentUpon>
@@ -475,6 +486,7 @@
     <None Include="Resources\planc.png" />
     <None Include="Resources\planb.png" />
     <None Include="Resources\agregar.png" />
+    <None Include="Resources\asesoria.png" />
     <Content Include="Resources\default.png" />
     <None Include="Resources\ejer.png" />
   </ItemGroup>
