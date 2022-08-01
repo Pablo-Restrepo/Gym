@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Visual.accesoDatos;
 using Oracle.ManagedDataAccess.Client;
 using Visual.modelo;
 
@@ -18,10 +17,13 @@ namespace Visual
     {
         private object aux = 1;
         String connectionString = UserCache.conexion;
+        Boolean aux1 = false;
+        Form fH;
         public Form1()
         {
             InitializeComponent();
             abrirFormHija(new vtnInicio());
+            aux1 = true;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -86,12 +88,17 @@ namespace Visual
                 {
                     this.panelCentral.Controls.Clear();
                 }
-                Form fH = formHija as Form;
+                if (fH != null)
+                {
+                    fH.Dispose();
+                }
+                fH = formHija as Form;
                 fH.TopLevel = false;
                 fH.Dock = DockStyle.Fill;
                 this.panelCentral.Controls.Add(fH);
                 this.panelCentral.Tag = fH;
                 fH.Show();
+                
             }
             aux = formHija.GetType().Name;
         }

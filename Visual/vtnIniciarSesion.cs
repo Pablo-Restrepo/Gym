@@ -48,10 +48,12 @@ namespace Visual
             if (comprobarContrasenia())
             {
                 UserCache.User = txtUsuarioIniSes.Text;
+                //fotoUser();
                 Form formulario = new Form1();
                 this.Hide();
                 formulario.ShowDialog();
                 this.Close();
+                this.Dispose();
             }
         }
 
@@ -278,6 +280,26 @@ namespace Visual
             }
 
             return false;
+        }
+        private void fotoUser()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            DataSet dataSet = new DataSet();
+            miConexion.ConnectionString = connectionString;
+            miConexion.Open();
+            string sql = "";
+            sql = "SELECT PER_FOTO FROM CLIENTE WHERE USU_LOGIN ='" + UserCache.User + "'";
+            OracleCommand sqlSelect = new OracleCommand(sql);
+            sqlSelect.Connection = miConexion;
+            using (OracleDataAdapter dataAdapter = new OracleDataAdapter())
+            {
+                dataAdapter.SelectCommand = sqlSelect;
+                dataAdapter.Fill(dataSet);
+            }
+            if (!dataSet.Tables[0].Rows[0].ItemArray[0].ToString().Equals(null))
+            {
+                UserCache.PerFoto = (byte[])dataSet.Tables[0].Rows[0].ItemArray[0];
+            }
         }
     }
 }

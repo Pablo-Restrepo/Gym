@@ -79,7 +79,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accesoDatos\Datos.cs" />
     <Compile Include="modelo\clsCurso.cs" />
     <Compile Include="modelo\clsExamenMedico.cs" />
     <Compile Include="modelo\UserCache.cs" />
@@ -482,11 +481,16 @@
     <None Include="Resources\comprar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\usuario.png" />
     <None Include="Resources\plane.png" />
     <None Include="Resources\planc.png" />
     <None Include="Resources\planb.png" />
     <None Include="Resources\agregar.png" />
     <None Include="Resources\asesoria.png" />
+    <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
+    <None Include="Resources\20-203432_profile-icon-png-image-free-download-searchpng-ville.png" />
     <Content Include="Resources\default.png" />
     <None Include="Resources\ejer.png" />
   </ItemGroup>

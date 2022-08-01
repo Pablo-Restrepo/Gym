@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Visual
         Boolean baseB = false;
         Boolean baseE = false;
         Boolean baseC = false;
+        Form fH;
         public vtnInicio()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace Visual
         private void vtnInicio_Load(object sender, EventArgs e)
         {
             comprobarSuscrip();
+            infoUser();
         }
 
         private void abrirFormHija(object formHija)
@@ -34,8 +37,11 @@ namespace Visual
             {
                 this.panel1.Controls.Clear();
             }
-
-            Form fH = formHija as Form;
+            if (fH != null)
+            {
+                fH.Dispose();
+            }
+            fH = formHija as Form;
             fH.TopLevel = false;
             fH.Dock = DockStyle.Fill;
             this.panel1.Controls.Add(fH);
@@ -155,6 +161,29 @@ namespace Visual
             {
                 miConexion.Close();
             }
+        }
+        private void infoUser()
+        {
+            lblUserNombre.Text = UserCache.User;
+            try
+            {
+                System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+                gp.AddEllipse(0, 0, pbFotoUser.Width - 3, pbFotoUser.Height - 3);
+                Region rg = new Region(gp);
+                pbFotoUser.Region = rg;
+                MemoryStream ms = new MemoryStream();
+                ms = new MemoryStream(UserCache.PerFoto);
+                pbFotoUser.Image = Image.FromStream(ms);
+            }
+            catch (Exception)
+            {
+            }
+            
+        }
+
+        private void pbFotoUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

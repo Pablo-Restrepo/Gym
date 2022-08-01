@@ -41,6 +41,8 @@ namespace Visual
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbFotoUser = new System.Windows.Forms.PictureBox();
+            this.lblUserNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Alimentacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maquina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrenI)).BeginInit();
@@ -53,6 +55,7 @@ namespace Visual
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).BeginInit();
             this.SuspendLayout();
             // 
             // Alimentacion
@@ -212,6 +215,8 @@ namespace Visual
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pbFotoUser);
+            this.panel1.Controls.Add(this.lblUserNombre);
             this.panel1.Controls.Add(this.Alimentacion);
             this.panel1.Controls.Add(this.Maquina);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -227,6 +232,29 @@ namespace Visual
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1052, 720);
             this.panel1.TabIndex = 32;
+            // 
+            // pbFotoUser
+            // 
+            this.pbFotoUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFotoUser.Image = global::Visual.Properties.Resources.images__1_;
+            this.pbFotoUser.InitialImage = null;
+            this.pbFotoUser.Location = new System.Drawing.Point(829, 5);
+            this.pbFotoUser.Name = "pbFotoUser";
+            this.pbFotoUser.Size = new System.Drawing.Size(73, 73);
+            this.pbFotoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoUser.TabIndex = 33;
+            this.pbFotoUser.TabStop = false;
+            this.pbFotoUser.Click += new System.EventHandler(this.pbFotoUser_Click);
+            // 
+            // lblUserNombre
+            // 
+            this.lblUserNombre.AutoSize = true;
+            this.lblUserNombre.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNombre.Location = new System.Drawing.Point(911, 27);
+            this.lblUserNombre.Name = "lblUserNombre";
+            this.lblUserNombre.Size = new System.Drawing.Size(57, 26);
+            this.lblUserNombre.TabIndex = 32;
+            this.lblUserNombre.Text = "User";
             // 
             // vtnInicio
             // 
@@ -257,6 +285,8 @@ namespace Visual
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +305,7 @@ namespace Visual
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblUserNombre;
+        private System.Windows.Forms.PictureBox pbFotoUser;
     }
 }

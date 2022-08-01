@@ -150,7 +150,6 @@ namespace Visual
             {
                 this.panelCentro.Controls.Clear();
             }
-
             Form fH = formHija as Form;
             fH.TopLevel = false;
             fH.Dock = DockStyle.Fill;

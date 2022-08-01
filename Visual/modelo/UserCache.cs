@@ -11,5 +11,7 @@ namespace Visual.modelo
         public static string User { get; set; }
         public static string conexion { get; set; }
 
+        public static byte[] PerFoto = new byte[0];
+
     }
 }
