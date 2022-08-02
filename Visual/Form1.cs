@@ -19,6 +19,7 @@ namespace Visual
         String connectionString = UserCache.conexion;
         Boolean aux1 = false;
         Form fH;
+        Boolean examenM = false;
         public Form1()
         {
             InitializeComponent();
@@ -125,13 +126,21 @@ namespace Visual
 
         private void Entrenador_Click(object sender, EventArgs e)
         {
-            if (comprobar())
+            comprobarExamen();
+            if (examenM)
             {
-                abrirFormHija(new vtnEntrenador());
+                if (comprobar())
+                {
+                    abrirFormHija(new vtnEntrenador());
+                }
+                else
+                {
+                    MessageBox.Show("Compre un plan para continuar");
+                }
             }
             else
             {
-                MessageBox.Show("Compre un plan para continuar");
+                MessageBox.Show("Realize el examen medico primero");
             }
         }
 
@@ -174,6 +183,39 @@ namespace Visual
             {
                 miConexion.Close();
                 return false;
+            }
+        }
+        private void comprobarExamen()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                DataSet dataSet = new DataSet();
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT EXA_NOMBRE FROM USUARIO WHERE usu_login = '" + UserCache.User + "'";
+                OracleCommand sqlSelect = new OracleCommand(sql);
+                sqlSelect.CommandType = CommandType.Text;
+                sqlSelect.Connection = miConexion;
+                using (OracleDataAdapter dataAdapter = new OracleDataAdapter())
+                {
+                    dataAdapter.SelectCommand = sqlSelect;
+                    dataAdapter.Fill(dataSet);
+                }
+                miConexion.Close();
+                if (!dataSet.Tables[0].Rows[0].ItemArray[0].ToString().Equals(""))
+                {
+                    examenM = true;
+                }
+                else
+                {
+                    examenM = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
             }
         }
     }

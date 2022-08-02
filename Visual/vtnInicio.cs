@@ -19,6 +19,7 @@ namespace Visual
         Boolean baseB = false;
         Boolean baseE = false;
         Boolean baseC = false;
+        Boolean examenM = false;
         Form fH;
         public vtnInicio()
         {
@@ -27,6 +28,7 @@ namespace Visual
 
         private void vtnInicio_Load(object sender, EventArgs e)
         {
+            comprobarExamenMedico();
             comprobarSuscrip();
             infoUser();
         }
@@ -50,14 +52,22 @@ namespace Visual
         }
         private void Rutinas_Click(object sender, EventArgs e)
         {
-            if (baseB)
+            if (examenM)
             {
-                abrirFormHija(new vtnRutina());
+                if (baseB)
+                {
+                    abrirFormHija(new vtnRutina());
+                }
+                else
+                {
+                    MessageBox.Show("Compre un plan para continuar");
+                }
             }
             else
             {
-                MessageBox.Show("Compre un plan para continuar");
+                MessageBox.Show("Realize el examen medico primero");
             }
+            
         }
 
         private void Alimentacion_Click(object sender, EventArgs e)
@@ -74,37 +84,58 @@ namespace Visual
 
         private void TrenS_Click(object sender, EventArgs e)
         {
-            if (baseB)
+            if (examenM)
             {
-                abrirFormHija(new vtnTrenSu());
+                if (baseB)
+                {
+                    abrirFormHija(new vtnTrenSu());
+                }
+                else
+                {
+                    MessageBox.Show("Compre un plan para continuar");
+                }
             }
             else
             {
-                MessageBox.Show("Compre un plan para continuar");
+                MessageBox.Show("Realize el examen medico primero");
             }
         }
 
         private void TrenI_Click(object sender, EventArgs e)
         {
-            if (baseB)
+            if (examenM)
             {
-                abrirFormHija(new vtnTrenIn());
+                if (baseB)
+                {
+                    abrirFormHija(new vtnTrenIn());
+                }
+                else
+                {
+                    MessageBox.Show("Compre un plan para continuar");
+                }
             }
             else
             {
-                MessageBox.Show("Compre un plan para continuar");
+                MessageBox.Show("Realize el examen medico primero");
             }
         }
 
         private void Otros_Click(object sender, EventArgs e)
         {
-            if (baseB)
+            if (examenM)
             {
-                abrirFormHija(new vtnOtrosE());
+                if (baseB)
+                {
+                    abrirFormHija(new vtnOtrosE());
+                }
+                else
+                {
+                    MessageBox.Show("Compre un plan para continuar");
+                }
             }
             else
             {
-                MessageBox.Show("Compre un plan para continuar");
+                MessageBox.Show("Realize el examen medico primero");
             }
         }
 
@@ -183,7 +214,36 @@ namespace Visual
 
         private void pbFotoUser_Click(object sender, EventArgs e)
         {
-
+            abrirFormHija(new vtnPerfil());
+        }
+        private void comprobarExamenMedico()
+        {
+            OracleConnection miConexion = new OracleConnection();
+            try
+            {
+                DataSet dataSet = new DataSet();
+                miConexion.ConnectionString = connectionString;
+                miConexion.Open();
+                string sql = "";
+                sql = "SELECT EXA_NOMBRE FROM USUARIO WHERE usu_login = '" + UserCache.User + "'";
+                OracleCommand sqlSelect = new OracleCommand(sql);
+                sqlSelect.CommandType = CommandType.Text;
+                sqlSelect.Connection = miConexion;
+                using (OracleDataAdapter dataAdapter = new OracleDataAdapter())
+                {
+                    dataAdapter.SelectCommand = sqlSelect;
+                    dataAdapter.Fill(dataSet);
+                }
+                miConexion.Close();
+                if (!dataSet.Tables[0].Rows[0].ItemArray[0].ToString().Equals(""))
+                {
+                    examenM = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                miConexion.Close();
+            }
         }
     }
 }

@@ -141,6 +141,12 @@
     <Compile Include="vtnEntrenadores.Designer.cs">
       <DependentUpon>vtnEntrenadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="vtnPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnPerfil.Designer.cs">
+      <DependentUpon>vtnPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtnRutinas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vtnEntrenadores.resx">
       <DependentUpon>vtnEntrenadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnPerfil.resx">
+      <DependentUpon>vtnPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnRutinas.resx">
       <DependentUpon>vtnRutinas.cs</DependentUpon>
@@ -481,6 +490,8 @@
     <None Include="Resources\comprar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\medico.png" />
+    <None Include="Resources\perfil.png" />
     <None Include="Resources\images %281%29.png" />
     <None Include="Resources\images.png" />
     <None Include="Resources\usuario.png" />
@@ -491,6 +502,7 @@
     <None Include="Resources\asesoria.png" />
     <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
     <None Include="Resources\20-203432_profile-icon-png-image-free-download-searchpng-ville.png" />
+    <None Include="Resources\cancelarsus.png" />
     <Content Include="Resources\default.png" />
     <None Include="Resources\ejer.png" />
   </ItemGroup>
