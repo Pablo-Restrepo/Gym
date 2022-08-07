@@ -64,7 +64,7 @@ namespace Visual
                     cartel.PerSexo = dataSet.Tables[0].Rows[j].ItemArray[4].ToString();
                     if (dataSet.Tables[0].Rows[j].ItemArray[7].ToString().Equals(""))
                     {
-                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\default.png");
                         cartel.PerFoto = imagen;
                     }
                     else

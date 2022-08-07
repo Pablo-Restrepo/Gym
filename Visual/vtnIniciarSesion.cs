@@ -48,7 +48,6 @@ namespace Visual
             if (comprobarContrasenia())
             {
                 UserCache.User = txtUsuarioIniSes.Text;
-                //fotoUser();
                 Form formulario = new Form1();
                 this.Hide();
                 formulario.ShowDialog();
@@ -60,6 +59,7 @@ namespace Visual
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             pbLogo.Visible = false;
+            btnAdmin.Visible = false;
             pbLogoIniciarSes.Visible = false;
             btnRegistrarse.Visible = true;
             txtUsuario.Visible = true;
@@ -135,6 +135,7 @@ namespace Visual
                                 txtAltura.Visible = false;
                                 pbRegistr.Visible = false;
                                 btnVolver.Visible = false;
+                                btnAdmin.Visible = true;
                             }
                             miConexion.Close();
                         }
@@ -181,6 +182,7 @@ namespace Visual
             txtAltura.Visible = false;
             pbRegistr.Visible = false;
             btnVolver.Visible = false;
+            btnAdmin.Visible = true;
         }
         private Boolean comprobarUsuario()
         {
@@ -300,6 +302,14 @@ namespace Visual
             {
                 UserCache.PerFoto = (byte[])dataSet.Tables[0].Rows[0].ItemArray[0];
             }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Form formulario = new vtnAdmin();
+            this.Hide();
+            formulario.ShowDialog();
+            this.Dispose();
         }
     }
 }

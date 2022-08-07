@@ -33,6 +33,7 @@ namespace Visual
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.btnAdmin = new System.Windows.Forms.PictureBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
@@ -57,6 +58,7 @@ namespace Visual
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelBarraTop.SuspendLayout();
             this.panelCentral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistr)).BeginInit();
@@ -114,6 +116,7 @@ namespace Visual
             // 
             this.panelCentral.BackColor = System.Drawing.Color.Transparent;
             this.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCentral.Controls.Add(this.btnAdmin);
             this.panelCentral.Controls.Add(this.txtCiudad);
             this.panelCentral.Controls.Add(this.dtpFechaNacimiento);
             this.panelCentral.Controls.Add(this.cbxSexo);
@@ -142,6 +145,19 @@ namespace Visual
             this.panelCentral.Size = new System.Drawing.Size(906, 720);
             this.panelCentral.TabIndex = 3;
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin.Image = global::Visual.Properties.Resources.admin;
+            this.btnAdmin.Location = new System.Drawing.Point(12, 655);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(152, 53);
+            this.btnAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdmin.TabIndex = 24;
+            this.btnAdmin.TabStop = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // txtCiudad
             // 
             this.txtCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
@@ -163,11 +179,11 @@ namespace Visual
             this.dtpFechaNacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
             this.dtpFechaNacimiento.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
             this.dtpFechaNacimiento.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(663, 343);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(119, 24);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(119, 23);
             this.dtpFechaNacimiento.TabIndex = 22;
             this.dtpFechaNacimiento.Visible = false;
             // 
@@ -175,7 +191,7 @@ namespace Visual
             // 
             this.cbxSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(80)))));
             this.cbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSexo.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSexo.ForeColor = System.Drawing.Color.White;
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.Items.AddRange(new object[] {
@@ -183,7 +199,7 @@ namespace Visual
             "Mujer"});
             this.cbxSexo.Location = new System.Drawing.Point(556, 406);
             this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(227, 26);
+            this.cbxSexo.Size = new System.Drawing.Size(227, 24);
             this.cbxSexo.TabIndex = 21;
             this.cbxSexo.Visible = false;
             // 
@@ -461,6 +477,7 @@ namespace Visual
             this.panelBarraTop.ResumeLayout(false);
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRegistrarse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistr)).EndInit();
@@ -499,6 +516,7 @@ namespace Visual
         private System.Windows.Forms.ComboBox cbxSexo;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.PictureBox btnAdmin;
     }
 }
 

@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarRutina.Designer.cs">
+      <DependentUpon>AgregarRutina.cs</DependentUpon>
+    </Compile>
     <Compile Include="modelo\clsCurso.cs" />
     <Compile Include="modelo\clsExamenMedico.cs" />
     <Compile Include="modelo\UserCache.cs" />
@@ -97,6 +103,66 @@
     <Compile Include="modelo\clsUsuario.cs" />
     <Compile Include="modelo\Compra.cs" />
     <Compile Include="modelo\Compra1.cs" />
+    <Compile Include="vtnAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAdmin.Designer.cs">
+      <DependentUpon>vtnAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarCurso.Designer.cs">
+      <DependentUpon>vtnAgregarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarEjercicio.Designer.cs">
+      <DependentUpon>vtnAgregarEjercicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarElementos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarElementos.Designer.cs">
+      <DependentUpon>vtnAgregarElementos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarEntrenador.Designer.cs">
+      <DependentUpon>vtnAgregarEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarMaquinas.Designer.cs">
+      <DependentUpon>vtnAgregarMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarProducto.Designer.cs">
+      <DependentUpon>vtnAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnAgregarProveedor.Designer.cs">
+      <DependentUpon>vtnAgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnCapacita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnCapacita.Designer.cs">
+      <DependentUpon>vtnCapacita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtnGestionarEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnGestionarEntrenador.Designer.cs">
+      <DependentUpon>vtnGestionarEntrenador.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtnIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +195,12 @@
     <Compile Include="vtnEjercicio.Designer.cs">
       <DependentUpon>vtnEjercicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="vtnPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtnPerfil.Designer.cs">
+      <DependentUpon>vtnPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtnPlanAlimentacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,11 +213,11 @@
     <Compile Include="vtnEntrenadores.Designer.cs">
       <DependentUpon>vtnEntrenadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="vtnPerfil.cs">
+    <Compile Include="vtnReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vtnPerfil.Designer.cs">
-      <DependentUpon>vtnPerfil.cs</DependentUpon>
+    <Compile Include="vtnReportes.Designer.cs">
+      <DependentUpon>vtnReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="vtnRutinas.cs">
       <SubType>Form</SubType>
@@ -225,6 +297,39 @@
     <Compile Include="vtnRutina.Designer.cs">
       <DependentUpon>vtnRutina.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarRutina.resx">
+      <DependentUpon>AgregarRutina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAdmin.resx">
+      <DependentUpon>vtnAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarCurso.resx">
+      <DependentUpon>vtnAgregarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarEjercicio.resx">
+      <DependentUpon>vtnAgregarEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarElementos.resx">
+      <DependentUpon>vtnAgregarElementos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarEntrenador.resx">
+      <DependentUpon>vtnAgregarEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarMaquinas.resx">
+      <DependentUpon>vtnAgregarMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarProducto.resx">
+      <DependentUpon>vtnAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnAgregarProveedor.resx">
+      <DependentUpon>vtnAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnCapacita.resx">
+      <DependentUpon>vtnCapacita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtnGestionarEntrenador.resx">
+      <DependentUpon>vtnGestionarEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vtnIniciarSesion.resx">
       <DependentUpon>vtnIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,14 +350,17 @@
     <EmbeddedResource Include="vtnEjercicio.resx">
       <DependentUpon>vtnEjercicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vtnPerfil.resx">
+      <DependentUpon>vtnPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vtnPlanAlimentacion.resx">
       <DependentUpon>vtnPlanAlimentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnEntrenadores.resx">
       <DependentUpon>vtnEntrenadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vtnPerfil.resx">
-      <DependentUpon>vtnPerfil.cs</DependentUpon>
+    <EmbeddedResource Include="vtnReportes.resx">
+      <DependentUpon>vtnReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtnRutinas.resx">
       <DependentUpon>vtnRutinas.cs</DependentUpon>
@@ -490,8 +598,15 @@
     <None Include="Resources\comprar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\medico.png" />
-    <None Include="Resources\perfil.png" />
+    <Content Include="Resources\cancelarsus.png" />
+    <None Include="Resources\tabien.png" />
+    <None Include="Resources\cancelarsus1.png" />
+    <Content Include="Resources\medico.png" />
+    <None Include="Resources\medico1.png" />
+    <Content Include="Resources\perfil.png" />
+    <None Include="Resources\perfil1.png" />
+    <None Include="Resources\Nombre1.png" />
+    <None Include="Resources\Nombre.png" />
     <None Include="Resources\images %281%29.png" />
     <None Include="Resources\images.png" />
     <None Include="Resources\usuario.png" />
@@ -502,7 +617,31 @@
     <None Include="Resources\asesoria.png" />
     <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
     <None Include="Resources\20-203432_profile-icon-png-image-free-download-searchpng-ville.png" />
-    <None Include="Resources\cancelarsus.png" />
+    <None Include="Resources\button_reportes.png" />
+    <None Include="Resources\button_agregar-elementos.png" />
+    <None Include="Resources\button_entrenador-gestion.png" />
+    <None Include="Resources\button_maquina-por-grupo-muscular.png" />
+    <None Include="Resources\button_rutinas-mas-usadas.png" />
+    <None Include="Resources\button_numero-de-asesorias-de-entrenador.png" />
+    <None Include="Resources\button_maquina-por-grupo-muscular %281%29.png" />
+    <None Include="Resources\button_numero-de-asesorias-entrenador.png" />
+    <None Include="Resources\button_entrenador-gestion %281%29.png" />
+    <None Include="Resources\button_agregar-elementos %281%29.png" />
+    <None Include="Resources\button_agregar-maquina.png" />
+    <None Include="Resources\button_agregar-ejercicio.png" />
+    <None Include="Resources\button_agregar-proveedor.png" />
+    <None Include="Resources\button_agregar-producto.png" />
+    <None Include="Resources\button_crear-entrenador.png" />
+    <None Include="Resources\button_crear-curso.png" />
+    <None Include="Resources\button_crear-rutina.png" />
+    <None Include="Resources\button_capacitar-entrenador.png" />
+    <None Include="Resources\Agregar Entrenador.png" />
+    <None Include="Resources\button_devolver.png" />
+    <None Include="Resources\button_atras.png" />
+    <None Include="Resources\button_producto-mas-comprados.png" />
+    <None Include="Resources\button_suscripciones-mas-compradas.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\botonis1.png" />
     <Content Include="Resources\default.png" />
     <None Include="Resources\ejer.png" />
   </ItemGroup>

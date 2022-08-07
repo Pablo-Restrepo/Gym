@@ -66,7 +66,7 @@ namespace Visual
 
                     if (dataSet.Tables[0].Rows[j].ItemArray[8].ToString().Equals(""))
                     {
-                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\default.png");
                         cartel.EjerFoto = imagen;
                     }
                     else
@@ -84,7 +84,7 @@ namespace Visual
 
                     if (dataSet.Tables[0].Rows[j].ItemArray[16].ToString().Equals(""))
                     {
-                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\default.png");
                         cartelp.MaqFoto = imagen;
                     }
                     else

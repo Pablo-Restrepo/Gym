@@ -89,7 +89,7 @@ namespace Visual
                 costo = new Label();
                 cant++;
 
-                byte[] imagen = File.ReadAllBytes("a\\b.png");
+                byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\b.png");
                 ms = new MemoryStream(imagen);
                 p.BackgroundImage = Image.FromStream(ms);
                 p.BackgroundImageLayout = ImageLayout.Stretch;
@@ -209,7 +209,7 @@ namespace Visual
                 costo = new Label();
                 cant++;
 
-                byte[] imagen = File.ReadAllBytes("a\\b.png");
+                byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\b.png");
                 ms = new MemoryStream(imagen);
                 p.BackgroundImage = Image.FromStream(ms);
                 p.BackgroundImageLayout = ImageLayout.Stretch;

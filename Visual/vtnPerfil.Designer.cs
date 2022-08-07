@@ -148,7 +148,9 @@ namespace Visual
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.ErrorImage = null;
             this.btnCancelar.Image = global::Visual.Properties.Resources.cancelarsus;
+            this.btnCancelar.InitialImage = null;
             this.btnCancelar.Location = new System.Drawing.Point(75, 583);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(171, 61);

@@ -63,7 +63,7 @@ namespace Visual
                     cartel.ProdCantidad = Int32.Parse(dataSet.Tables[0].Rows[j].ItemArray[4].ToString());
                     if (dataSet.Tables[0].Rows[j].ItemArray[5].ToString().Equals(""))
                     {
-                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\default.png");
                         cartel.ProdFoto = imagen;
                     }
                     else

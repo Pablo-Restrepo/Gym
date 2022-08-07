@@ -127,14 +127,26 @@
   <data name="regis2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regis2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_devolver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_devolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-proveedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Linea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Linea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_maquina-por-grupo-muscular (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_maquina-por-grupo-muscular (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_capacitar-entrenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_capacitar-entrenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inicio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inicio1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +156,9 @@
   </data>
   <data name="regitrarsefinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regitrarsefinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trenii" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trenii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,17 +172,23 @@
   <data name="comprar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comprar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registrars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registrars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botonis1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cuadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cuadro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="registrars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\registrars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Maquinas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maquinas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_rutinas-mas-usadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_rutinas-mas-usadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nutri" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nutri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -185,13 +206,16 @@
     <value>..\Resources\acerca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\medico1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="128-1280406_view-user-icon-png-user-circle-icon-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_suscripciones-mas-compradas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_suscripciones-mas-compradas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_numero-de-asesorias-de-entrenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_numero-de-asesorias-de-entrenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,11 +223,11 @@
   <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_producto-mas-comprados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_producto-mas-comprados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagen15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen15.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +241,9 @@
   <data name="otross" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\otross.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="maqui" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maqui.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ejer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ejer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,17 +253,41 @@
   <data name="planb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\planb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Agregar Entrenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Agregar Entrenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-maquina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-maquina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancelarsus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelarsus1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Nutricion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nutricion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="62aadffb8508e1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\62aadffb8508e1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrenI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrenI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OtrosP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OtrosP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,26 +295,44 @@
   <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Acercade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Acercade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_entrenador-gestion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_entrenador-gestion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="62aadffb8508e1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\62aadffb8508e1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ejercicios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ejercicios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-elementos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-elementos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prod" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TrenI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TrenI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_reportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_reportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_crear-curso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_crear-curso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-elementos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-elementos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="regis1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_crear-rutina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_crear-rutina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Proteina" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Proteina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nombre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombre1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,8 +355,8 @@
   <data name="plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ejercicios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ejercicios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="entre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\entre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,17 +364,29 @@
   <data name="20-203432_profile-icon-png-image-free-download-searchpng-ville" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20-203432_profile-icon-png-image-free-download-searchpng-ville.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maqui" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maqui.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Acercade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Acercade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prote" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_entrenador-gestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_entrenador-gestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Adicionales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adicionales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_agregar-ejercicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_agregar-ejercicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_crear-entrenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_crear-entrenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_numero-de-asesorias-entrenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_numero-de-asesorias-entrenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,10 +403,13 @@
   <data name="Otros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Otros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_maquina-por-grupo-muscular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_maquina-por-grupo-muscular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ali" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ali.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancelarsus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelarsus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tabien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

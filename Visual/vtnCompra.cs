@@ -59,7 +59,7 @@ namespace Visual
                     cartel.ProdPrecio = float.Parse(dataSet.Tables[0].Rows[j].ItemArray[2].ToString());
                     if (dataSet.Tables[0].Rows[j].ItemArray[11].ToString().Equals(""))
                     {
-                        byte[] imagen = File.ReadAllBytes("a\\default.png");
+                        byte[] imagen = File.ReadAllBytes("..\\..\\Resources\\default.png");
                         cartel.ProdFoto = imagen;
                     }
                     else

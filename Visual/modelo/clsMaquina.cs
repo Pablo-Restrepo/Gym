@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto.modelo
 {
-    class clsMaquina
+    public class clsMaquina
     {
         public int MaqCodigo;
         public string MaqNombre;
@@ -15,5 +15,9 @@ namespace Proyecto.modelo
         public string MaqMusculoTrabaja;
         public string MaqMarca;
         public byte[] MaqFoto = new byte[0];
+
+        //constructor
+       
+
     }
 }
