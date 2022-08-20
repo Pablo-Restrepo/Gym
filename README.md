@@ -4,6 +4,8 @@ App para gestion de gym usando base de datos.
 Proyecto para Laboratorio de Bases de Datos en la Universidad del Cauca.
 Creado por Pablo Jose Restrepo Ruiz y Santiago Agredo Vallejo.
 Se utiliza: POO, SQL, C# y Forms.
+NuGet necesario para funcionar: Oracle.ManagedDataAccess.
+Scripts incluidos para la creacion de la base de datos en SQL Server.
 ![image](https://user-images.githubusercontent.com/67757313/185767515-35e6a7a6-9f71-4471-8e4d-7918bfb06c91.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767524-32ba949a-3eb0-4579-a369-8668cffd5d0c.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767530-e63e6627-dab6-4744-aea6-f989793d81b1.png)
@@ -17,3 +19,4 @@ Se utiliza: POO, SQL, C# y Forms.
 ![image](https://user-images.githubusercontent.com/67757313/185767591-3e978a27-3a00-4e8d-bd3c-e66d6fddded0.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767599-cc7e2f2f-bbf5-4320-8b1e-140c7f098584.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767609-c0da4d96-cbfb-428d-9e9b-8585bc369efe.png)
+![image](https://user-images.githubusercontent.com/67757313/185768004-af9ed89b-7704-4961-b40e-a4a2251eb128.png)
