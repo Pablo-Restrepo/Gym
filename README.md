@@ -2,7 +2,7 @@
 Unicauca Fit.
 App para gestion de gym usando base de datos.
 Proyecto para Laboratorio de Bases de Datos en la Universidad del Cauca.
-Creado por Pablo Jose Restrepo Ruiz y Santiago Agredo Vallejo.
+Creado por Pablo Restrepo y Santiago Agredo Vallejo.
 Se utiliza: POO, SQL, C# y Forms.
 NuGet necesario para funcionar: Oracle.ManagedDataAccess.
 Scripts incluidos para la creacion de la base de datos en SQL Server.
@@ -17,6 +17,4 @@ Scripts incluidos para la creacion de la base de datos en SQL Server.
 ![image](https://user-images.githubusercontent.com/67757313/185767579-b20b631d-0fb6-4da9-90ac-cd708d8b21d1.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767586-ba0f7cff-0b36-4821-9fa6-27c7f407427d.png)
 ![image](https://user-images.githubusercontent.com/67757313/185767591-3e978a27-3a00-4e8d-bd3c-e66d6fddded0.png)
-![image](https://user-images.githubusercontent.com/67757313/185767599-cc7e2f2f-bbf5-4320-8b1e-140c7f098584.png)
-![image](https://user-images.githubusercontent.com/67757313/185767609-c0da4d96-cbfb-428d-9e9b-8585bc369efe.png)
 ![image](https://user-images.githubusercontent.com/67757313/185768004-af9ed89b-7704-4961-b40e-a4a2251eb128.png)
